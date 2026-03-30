@@ -32,17 +32,19 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
+            pictureBox3 = new PictureBox();
             pictureBox5 = new PictureBox();
             button2 = new Button();
             pictureBox4 = new PictureBox();
             pictureBox2 = new PictureBox();
             button3 = new Button();
             button1 = new Button();
-            label2 = new Label();
+            panel3 = new Panel();
             pictureBox1 = new PictureBox();
-            button4 = new Button();
+            label2 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -72,23 +74,35 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(64, 64, 64);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(pictureBox5);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(pictureBox4);
             panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(button1);
-            panel2.Controls.Add(label2);
+            panel2.Controls.Add(panel3);
             panel2.Location = new Point(-6, -4);
             panel2.Name = "panel2";
             panel2.Size = new Size(200, 783);
             panel2.TabIndex = 1;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(18, 7);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(169, 122);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 12;
+            pictureBox3.TabStop = false;
+            // 
             // pictureBox5
             // 
             pictureBox5.BackColor = Color.White;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(18, 493);
+            pictureBox5.Location = new Point(18, 502);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(42, 48);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
@@ -102,7 +116,7 @@
             button2.ForeColor = Color.White;
             button2.Location = new Point(3, 493);
             button2.Name = "button2";
-            button2.Size = new Size(197, 48);
+            button2.Size = new Size(197, 66);
             button2.TabIndex = 10;
             button2.Text = "  Fechar";
             button2.UseVisualStyleBackColor = true;
@@ -110,7 +124,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(18, 363);
+            pictureBox4.Location = new Point(18, 372);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(42, 48);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -120,7 +134,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.Caixa;
-            pictureBox2.Location = new Point(18, 221);
+            pictureBox2.Location = new Point(18, 230);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(42, 48);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -134,7 +148,7 @@
             button3.ForeColor = Color.White;
             button3.Location = new Point(3, 363);
             button3.Name = "button3";
-            button3.Size = new Size(197, 48);
+            button3.Size = new Size(197, 66);
             button3.TabIndex = 4;
             button3.Text = "        Encomendas";
             button3.UseVisualStyleBackColor = true;
@@ -146,21 +160,18 @@
             button1.ForeColor = Color.White;
             button1.Location = new Point(3, 221);
             button1.Name = "button1";
-            button1.Size = new Size(197, 48);
+            button1.Size = new Size(197, 66);
             button1.TabIndex = 2;
             button1.Text = "      Estoque";
             button1.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // panel3
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Times New Roman", 26.25F, FontStyle.Bold | FontStyle.Italic);
-            label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(44, 46);
-            label2.Name = "label2";
-            label2.Size = new Size(118, 41);
-            label2.TabIndex = 1;
-            label2.Text = "STILO";
+            panel3.BackColor = Color.OrangeRed;
+            panel3.Location = new Point(90, 135);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(16, 567);
+            panel3.TabIndex = 13;
             // 
             // pictureBox1
             // 
@@ -173,14 +184,15 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // button4
+            // label2
             // 
-            button4.Location = new Point(209, 131);
-            button4.Name = "button4";
-            button4.Size = new Size(186, 345);
-            button4.TabIndex = 3;
-            button4.Text = "Cuzão preto ";
-            button4.UseVisualStyleBackColor = true;
+            label2.AutoSize = true;
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(18, 720);
+            label2.Name = "label2";
+            label2.Size = new Size(147, 15);
+            label2.TabIndex = 14;
+            label2.Text = "Copyrigth DTCompany Inc";
             // 
             // Form1
             // 
@@ -188,18 +200,18 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(1347, 776);
-            Controls.Add(button4);
             Controls.Add(pictureBox1);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
-            Text = "Home da Pizzaria";
+            Text = " ";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -215,11 +227,12 @@
         private PictureBox pictureBox1;
         private Button button3;
         private Button button1;
-        private Label label2;
         private PictureBox pictureBox4;
         private PictureBox pictureBox2;
         private Button button2;
         private PictureBox pictureBox5;
-        private Button button4;
+        private PictureBox pictureBox3;
+        private Panel panel3;
+        private Label label2;
     }
 }
