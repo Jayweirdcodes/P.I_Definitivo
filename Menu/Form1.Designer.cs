@@ -1,0 +1,225 @@
+﻿namespace Menu
+{
+    partial class Form1
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            panel1 = new Panel();
+            label1 = new Label();
+            panel2 = new Panel();
+            pictureBox5 = new PictureBox();
+            button2 = new Button();
+            pictureBox4 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            button3 = new Button();
+            button1 = new Button();
+            label2 = new Label();
+            pictureBox1 = new PictureBox();
+            button4 = new Button();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(192, 0, 0);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(-47, -7);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1399, 132);
+            panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Impact", 48F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(707, 29);
+            label1.Name = "label1";
+            label1.Size = new Size(179, 80);
+            label1.TabIndex = 0;
+            label1.Text = "Menu";
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(64, 64, 64);
+            panel2.Controls.Add(pictureBox5);
+            panel2.Controls.Add(button2);
+            panel2.Controls.Add(pictureBox4);
+            panel2.Controls.Add(pictureBox2);
+            panel2.Controls.Add(button3);
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(label2);
+            panel2.Location = new Point(-6, -4);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(200, 783);
+            panel2.TabIndex = 1;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.BackColor = Color.White;
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(18, 493);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(42, 48);
+            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox5.TabIndex = 11;
+            pictureBox5.TabStop = false;
+            // 
+            // button2
+            // 
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Font = new Font("Times New Roman", 15.75F);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(3, 493);
+            button2.Name = "button2";
+            button2.Size = new Size(197, 48);
+            button2.TabIndex = 10;
+            button2.Text = "  Fechar";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(18, 363);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(42, 48);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 8;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.Caixa;
+            pictureBox2.Location = new Point(18, 221);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(42, 48);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 6;
+            pictureBox2.TabStop = false;
+            // 
+            // button3
+            // 
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.Font = new Font("Times New Roman", 15.75F);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(3, 363);
+            button3.Name = "button3";
+            button3.Size = new Size(197, 48);
+            button3.TabIndex = 4;
+            button3.Text = "        Encomendas";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Times New Roman", 15.75F);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(3, 221);
+            button1.Name = "button1";
+            button1.Size = new Size(197, 48);
+            button1.TabIndex = 2;
+            button1.Text = "      Estoque";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Times New Roman", 26.25F, FontStyle.Bold | FontStyle.Italic);
+            label2.ForeColor = SystemColors.ButtonHighlight;
+            label2.Location = new Point(44, 46);
+            label2.Name = "label2";
+            label2.Size = new Size(118, 41);
+            label2.TabIndex = 1;
+            label2.Text = "STILO";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(417, 155);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(688, 576);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(209, 131);
+            button4.Name = "button4";
+            button4.Size = new Size(186, 345);
+            button4.TabIndex = 3;
+            button4.Text = "Cuzão preto ";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.SeaShell;
+            ClientSize = new Size(1347, 776);
+            Controls.Add(button4);
+            Controls.Add(pictureBox1);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "Form1";
+            Text = "Home da Pizzaria";
+            Load += Form1_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+        }
+
+        #endregion
+
+        private Panel panel1;
+        private Panel panel2;
+        private Label label1;
+        private PictureBox pictureBox1;
+        private Button button3;
+        private Button button1;
+        private Label label2;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox2;
+        private Button button2;
+        private PictureBox pictureBox5;
+        private Button button4;
+    }
+}
