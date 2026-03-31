@@ -38,21 +38,38 @@
             pictureBox2 = new PictureBox();
             BtnMenuEnco = new Button();
             panel3 = new Panel();
-            button3 = new Button();
-            button4 = new Button();
-            button2 = new Button();
             label4 = new Label();
-            button5 = new Button();
-            button6 = new Button();
+            label6 = new Label();
+            panel5 = new Panel();
+            button13 = new Button();
+            label9 = new Label();
+            textBox1 = new TextBox();
+            dataGridView1 = new DataGridView();
+            label5 = new Label();
+            panel4 = new Panel();
+            button3 = new Button();
             button7 = new Button();
             button8 = new Button();
-            button9 = new Button();
-            button10 = new Button();
+            button1 = new Button();
+            button2 = new Button();
+            panel6 = new Panel();
+            textBox2 = new TextBox();
+            label2 = new Label();
+            button4 = new Button();
+            textBox3 = new TextBox();
+            label3 = new Label();
+            Pedido = new DataGridViewTextBoxColumn();
+            Quantidade = new DataGridViewTextBoxColumn();
+            Obs = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel4.SuspendLayout();
+            panel6.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -90,6 +107,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(200, 783);
             panel2.TabIndex = 1;
+            panel2.Paint += panel2_Paint;
             // 
             // pictureBox3
             // 
@@ -158,84 +176,129 @@
             panel3.Size = new Size(16, 567);
             panel3.TabIndex = 7;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(253, 394);
+            label4.Name = "label4";
+            label4.Size = new Size(0, 15);
+            label4.TabIndex = 11;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Georgia", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(892, 215);
+            label6.Name = "label6";
+            label6.Size = new Size(418, 43);
+            label6.TabIndex = 19;
+            label6.Text = "Total de pedidos de hoje";
+            label6.Click += label6_Click;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.WhiteSmoke;
+            panel5.Controls.Add(label3);
+            panel5.Controls.Add(textBox3);
+            panel5.Controls.Add(textBox1);
+            panel5.Controls.Add(label9);
+            panel5.Controls.Add(button13);
+            panel5.Location = new Point(563, 282);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(273, 201);
+            panel5.TabIndex = 20;
+            // 
+            // button13
+            // 
+            button13.BackColor = Color.LightGray;
+            button13.FlatStyle = FlatStyle.Popup;
+            button13.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button13.Location = new Point(36, 149);
+            button13.Name = "button13";
+            button13.Size = new Size(200, 31);
+            button13.TabIndex = 14;
+            button13.Text = "Confirmar ";
+            button13.UseVisualStyleBackColor = false;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
+            label9.Font = new Font("Georgia", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.Black;
+            label9.Location = new Point(55, 7);
+            label9.Name = "label9";
+            label9.Size = new Size(149, 43);
+            label9.TabIndex = 19;
+            label9.Text = "Pedidos";
+            label9.Click += label9_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(25, 53);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(221, 23);
+            textBox1.TabIndex = 20;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Pedido, Quantidade, Obs });
+            dataGridView1.Location = new Point(892, 282);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(418, 409);
+            dataGridView1.TabIndex = 21;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Georgia", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.Black;
+            label5.Location = new Point(25, 4);
+            label5.Name = "label5";
+            label5.Size = new Size(153, 43);
+            label5.TabIndex = 21;
+            label5.Text = "Combos";
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.Snow;
+            panel4.Controls.Add(button2);
+            panel4.Controls.Add(button1);
+            panel4.Controls.Add(label5);
+            panel4.Controls.Add(button3);
+            panel4.Controls.Add(button8);
+            panel4.Controls.Add(button7);
+            panel4.Location = new Point(271, 251);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(200, 440);
+            panel4.TabIndex = 18;
+            panel4.Paint += panel4_Paint;
+            // 
             // button3
             // 
             button3.BackColor = Color.LightGray;
             button3.FlatStyle = FlatStyle.Popup;
             button3.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(318, 157);
+            button3.Location = new Point(0, 59);
             button3.Name = "button3";
-            button3.Size = new Size(207, 76);
+            button3.Size = new Size(200, 66);
             button3.TabIndex = 6;
-            button3.Text = "Pizza de calabresa";
+            button3.Text = "Pizza de calabresa + coca2L";
             button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.LightGray;
-            button4.FlatStyle = FlatStyle.Popup;
-            button4.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.Location = new Point(318, 344);
-            button4.Name = "button4";
-            button4.Size = new Size(207, 76);
-            button4.TabIndex = 7;
-            button4.Text = "Pastel de calabresa";
-            button4.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.LightGray;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(318, 551);
-            button2.Name = "button2";
-            button2.Size = new Size(207, 76);
-            button2.TabIndex = 10;
-            button2.Text = "Coca 1L";
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(230, 388);
-            label4.Name = "label4";
-            label4.Size = new Size(0, 15);
-            label4.TabIndex = 11;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.LightGray;
-            button5.FlatStyle = FlatStyle.Popup;
-            button5.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button5.Location = new Point(629, 551);
-            button5.Name = "button5";
-            button5.Size = new Size(207, 70);
-            button5.TabIndex = 12;
-            button5.Text = "Sprite 1L";
-            button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            button6.BackColor = Color.LightGray;
-            button6.FlatStyle = FlatStyle.Popup;
-            button6.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button6.Location = new Point(629, 344);
-            button6.Name = "button6";
-            button6.Size = new Size(207, 76);
-            button6.TabIndex = 13;
-            button6.Text = "Pastel de frango c/ catutipy";
-            button6.UseVisualStyleBackColor = false;
             // 
             // button7
             // 
             button7.BackColor = Color.LightGray;
             button7.FlatStyle = FlatStyle.Popup;
             button7.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button7.Location = new Point(629, 157);
+            button7.Location = new Point(0, 202);
             button7.Name = "button7";
-            button7.Size = new Size(207, 76);
+            button7.Size = new Size(200, 66);
             button7.TabIndex = 14;
-            button7.Text = "Pizza de frango c/ catupiry";
+            button7.Text = "Pizza de frango + coca 2L";
             button7.UseVisualStyleBackColor = false;
             // 
             // button8
@@ -243,36 +306,116 @@
             button8.BackColor = Color.LightGray;
             button8.FlatStyle = FlatStyle.Popup;
             button8.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button8.Location = new Point(933, 157);
+            button8.Location = new Point(0, 130);
             button8.Name = "button8";
-            button8.Size = new Size(207, 76);
+            button8.Size = new Size(200, 66);
             button8.TabIndex = 15;
-            button8.Text = "Pizza de queijo ";
+            button8.Text = "Pizza de queijo + coca 2L ";
             button8.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // button1
             // 
-            button9.BackColor = Color.LightGray;
-            button9.FlatStyle = FlatStyle.Popup;
-            button9.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button9.Location = new Point(933, 545);
-            button9.Name = "button9";
-            button9.Size = new Size(207, 76);
-            button9.TabIndex = 16;
-            button9.Text = "Pepsi 1L";
-            button9.UseVisualStyleBackColor = false;
+            button1.BackColor = Color.LightGray;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(0, 274);
+            button1.Name = "button1";
+            button1.Size = new Size(200, 66);
+            button1.TabIndex = 22;
+            button1.Text = "Pizza de Chocolate + Sprite 2L";
+            button1.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // button2
             // 
-            button10.BackColor = Color.LightGray;
-            button10.FlatStyle = FlatStyle.Popup;
-            button10.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button10.Location = new Point(933, 344);
-            button10.Name = "button10";
-            button10.Size = new Size(207, 76);
-            button10.TabIndex = 17;
-            button10.Text = "Pastel de queijo";
-            button10.UseVisualStyleBackColor = false;
+            button2.BackColor = Color.LightGray;
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.Location = new Point(0, 346);
+            button2.Name = "button2";
+            button2.Size = new Size(200, 66);
+            button2.TabIndex = 23;
+            button2.Text = "Pizza de Banana + Pepsi 2L";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.WhiteSmoke;
+            panel6.Controls.Add(textBox2);
+            panel6.Controls.Add(label2);
+            panel6.Controls.Add(button4);
+            panel6.Location = new Point(563, 506);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(273, 158);
+            panel6.TabIndex = 21;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(25, 53);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(221, 23);
+            textBox2.TabIndex = 20;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Georgia", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(26, 7);
+            label2.Name = "label2";
+            label2.Size = new Size(210, 43);
+            label2.TabIndex = 19;
+            label2.Text = "Observação";
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.LightGray;
+            button4.FlatStyle = FlatStyle.Popup;
+            button4.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button4.Location = new Point(36, 82);
+            button4.Name = "button4";
+            button4.Size = new Size(200, 31);
+            button4.TabIndex = 14;
+            button4.Text = "Confirmar ";
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(25, 114);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(221, 23);
+            textBox3.TabIndex = 21;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Georgia", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(55, 80);
+            label3.Name = "label3";
+            label3.Size = new Size(156, 31);
+            label3.TabIndex = 22;
+            label3.Text = "Quantidade";
+            // 
+            // Pedido
+            // 
+            Pedido.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Pedido.HeaderText = "Pedido";
+            Pedido.Name = "Pedido";
+            // 
+            // Quantidade
+            // 
+            Quantidade.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            Quantidade.HeaderText = "Quantidade";
+            Quantidade.Name = "Quantidade";
+            Quantidade.Width = 94;
+            // 
+            // Obs
+            // 
+            Obs.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Obs.HeaderText = "Obs";
+            Obs.Name = "Obs";
             // 
             // Encomanda
             // 
@@ -280,16 +423,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(1347, 776);
-            Controls.Add(button10);
-            Controls.Add(button9);
-            Controls.Add(button8);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
+            Controls.Add(panel6);
+            Controls.Add(label6);
+            Controls.Add(dataGridView1);
+            Controls.Add(panel5);
+            Controls.Add(panel4);
             Controls.Add(label4);
-            Controls.Add(button2);
-            Controls.Add(button4);
-            Controls.Add(button3);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -302,6 +441,13 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -315,17 +461,30 @@
         private Button BtnMenuEnco;
         private Button btnEstoqueEnco;
         private Panel panel3;
-        private Button button3;
-        private Button button4;
-        private Button button2;
         private Label label4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private Button button8;
-        private Button button9;
-        private Button button10;
         private PictureBox pictureBox3;
         private PictureBox pictureBox1;
+        private Label label6;
+        private Panel panel5;
+        private TextBox textBox1;
+        private Label label9;
+        private Button button13;
+        private DataGridView dataGridView1;
+        private Label label5;
+        private Panel panel4;
+        private Button button3;
+        private Button button7;
+        private Button button8;
+        private Button button2;
+        private Button button1;
+        private TextBox textBox3;
+        private Panel panel6;
+        private TextBox textBox2;
+        private Label label2;
+        private Button button4;
+        private Label label3;
+        private DataGridViewTextBoxColumn Pedido;
+        private DataGridViewTextBoxColumn Quantidade;
+        private DataGridViewTextBoxColumn Obs;
     }
 }
