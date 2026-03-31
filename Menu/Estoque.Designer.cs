@@ -38,15 +38,15 @@
             btnEncoEstoque = new Button();
             btnMenuEstoque = new Button();
             panel3 = new Panel();
-            dataGridView1 = new DataGridView();
+            dgvTabelaEstoque = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
             Produto = new DataGridViewTextBoxColumn();
             Quant = new DataGridViewTextBoxColumn();
             Validade = new DataGridViewTextBoxColumn();
             EmFalta = new DataGridViewTextBoxColumn();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            txtNomeProduto = new TextBox();
+            txtQuant = new TextBox();
+            txtValidade = new TextBox();
             button3 = new Button();
             button4 = new Button();
             label2 = new Label();
@@ -57,7 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTabelaEstoque).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -158,15 +158,15 @@
             panel3.Size = new Size(16, 567);
             panel3.TabIndex = 11;
             // 
-            // dataGridView1
+            // dgvTabelaEstoque
             // 
-            dataGridView1.AllowUserToOrderColumns = true;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, Produto, Quant, Validade, EmFalta });
-            dataGridView1.Location = new Point(260, 265);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(1020, 453);
-            dataGridView1.TabIndex = 2;
+            dgvTabelaEstoque.AllowUserToOrderColumns = true;
+            dgvTabelaEstoque.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTabelaEstoque.Columns.AddRange(new DataGridViewColumn[] { ID, Produto, Quant, Validade, EmFalta });
+            dgvTabelaEstoque.Location = new Point(260, 265);
+            dgvTabelaEstoque.Name = "dgvTabelaEstoque";
+            dgvTabelaEstoque.Size = new Size(1020, 453);
+            dgvTabelaEstoque.TabIndex = 2;
             // 
             // ID
             // 
@@ -200,26 +200,26 @@
             EmFalta.Name = "EmFalta";
             EmFalta.Width = 74;
             // 
-            // textBox1
+            // txtNomeProduto
             // 
-            textBox1.Location = new Point(269, 196);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(231, 23);
-            textBox1.TabIndex = 3;
+            txtNomeProduto.Location = new Point(269, 196);
+            txtNomeProduto.Name = "txtNomeProduto";
+            txtNomeProduto.Size = new Size(231, 23);
+            txtNomeProduto.TabIndex = 3;
             // 
-            // textBox2
+            // txtQuant
             // 
-            textBox2.Location = new Point(568, 196);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(124, 23);
-            textBox2.TabIndex = 4;
+            txtQuant.Location = new Point(568, 196);
+            txtQuant.Name = "txtQuant";
+            txtQuant.Size = new Size(124, 23);
+            txtQuant.TabIndex = 4;
             // 
-            // textBox3
+            // txtValidade
             // 
-            textBox3.Location = new Point(776, 196);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(172, 23);
-            textBox3.TabIndex = 5;
+            txtValidade.Location = new Point(776, 196);
+            txtValidade.Name = "txtValidade";
+            txtValidade.Size = new Size(172, 23);
+            txtValidade.TabIndex = 5;
             // 
             // button3
             // 
@@ -284,10 +284,10 @@
             Controls.Add(label2);
             Controls.Add(button4);
             Controls.Add(button3);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(dataGridView1);
+            Controls.Add(txtValidade);
+            Controls.Add(txtQuant);
+            Controls.Add(txtNomeProduto);
+            Controls.Add(dgvTabelaEstoque);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -300,7 +300,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvTabelaEstoque).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -314,11 +314,11 @@
         private Button btnMenuEstoque;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
-        private DataGridView dataGridView1;
+        private DataGridView dgvTabelaEstoque;
         private PictureBox pictureBox3;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox txtNomeProduto;
+        private TextBox txtQuant;
+        private TextBox txtValidade;
         private Button button3;
         private Button button4;
         private Label label2;
