@@ -34,9 +34,9 @@
             panel2 = new Panel();
             pictureBox3 = new PictureBox();
             pictureBox1 = new PictureBox();
-            button1 = new Button();
+            btnEstoqueEnco = new Button();
             pictureBox2 = new PictureBox();
-            txtMenu = new Button();
+            BtnMenuEnco = new Button();
             panel3 = new Panel();
             button3 = new Button();
             button4 = new Button();
@@ -82,9 +82,9 @@
             panel2.BackColor = Color.FromArgb(64, 64, 64);
             panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(pictureBox1);
-            panel2.Controls.Add(button1);
+            panel2.Controls.Add(btnEstoqueEnco);
             panel2.Controls.Add(pictureBox2);
-            panel2.Controls.Add(txtMenu);
+            panel2.Controls.Add(BtnMenuEnco);
             panel2.Controls.Add(panel3);
             panel2.Location = new Point(-6, -4);
             panel2.Name = "panel2";
@@ -112,18 +112,19 @@
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
-            // button1
+            // btnEstoqueEnco
             // 
-            button1.BackColor = Color.FromArgb(64, 64, 64);
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(3, 212);
-            button1.Name = "button1";
-            button1.Size = new Size(197, 66);
-            button1.TabIndex = 4;
-            button1.Text = "Estoque";
-            button1.UseVisualStyleBackColor = false;
+            btnEstoqueEnco.BackColor = Color.FromArgb(64, 64, 64);
+            btnEstoqueEnco.FlatStyle = FlatStyle.Popup;
+            btnEstoqueEnco.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEstoqueEnco.ForeColor = Color.White;
+            btnEstoqueEnco.Location = new Point(3, 212);
+            btnEstoqueEnco.Name = "btnEstoqueEnco";
+            btnEstoqueEnco.Size = new Size(197, 66);
+            btnEstoqueEnco.TabIndex = 4;
+            btnEstoqueEnco.Text = "Estoque";
+            btnEstoqueEnco.UseVisualStyleBackColor = false;
+            btnEstoqueEnco.Click += button1_Click;
             // 
             // pictureBox2
             // 
@@ -135,18 +136,19 @@
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
             // 
-            // txtMenu
+            // BtnMenuEnco
             // 
-            txtMenu.BackColor = Color.FromArgb(64, 64, 64);
-            txtMenu.FlatStyle = FlatStyle.Popup;
-            txtMenu.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtMenu.ForeColor = Color.White;
-            txtMenu.Location = new Point(3, 408);
-            txtMenu.Name = "txtMenu";
-            txtMenu.Size = new Size(197, 66);
-            txtMenu.TabIndex = 5;
-            txtMenu.Text = "Menu";
-            txtMenu.UseVisualStyleBackColor = false;
+            BtnMenuEnco.BackColor = Color.FromArgb(64, 64, 64);
+            BtnMenuEnco.FlatStyle = FlatStyle.Popup;
+            BtnMenuEnco.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            BtnMenuEnco.ForeColor = Color.White;
+            BtnMenuEnco.Location = new Point(3, 408);
+            BtnMenuEnco.Name = "BtnMenuEnco";
+            BtnMenuEnco.Size = new Size(197, 66);
+            BtnMenuEnco.TabIndex = 5;
+            BtnMenuEnco.Text = "Menu";
+            BtnMenuEnco.UseVisualStyleBackColor = false;
+            BtnMenuEnco.Click += BtnMenuEnco_Click;
             // 
             // panel3
             // 
@@ -309,8 +311,8 @@
         private Panel panel2;
         private PictureBox pictureBox2;
         private Label label1;
-        private Button txtMenu;
-        private Button button1;
+        private Button BtnMenuEnco;
+        private Button btnEstoqueEnco;
         private Panel panel3;
         private Button button3;
         private Button button4;

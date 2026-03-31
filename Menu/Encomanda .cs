@@ -31,5 +31,21 @@ namespace Menu
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Estoque estoque = new Estoque();
+            estoque.Show();
+            this.Close();
+
+
+        }
+
+        private void BtnMenuEnco_Click(object sender, EventArgs e)
+        {
+            Form1 form = new Form1();
+            form.Show();
+            this.Close();
+        }
     }
 }
