@@ -32,6 +32,7 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
+            label2 = new Label();
             pictureBox3 = new PictureBox();
             pictureBox5 = new PictureBox();
             button2 = new Button();
@@ -41,7 +42,6 @@
             button1 = new Button();
             panel3 = new Panel();
             pictureBox1 = new PictureBox();
-            label2 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -87,6 +87,17 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(200, 783);
             panel2.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Georgia", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(11, 721);
+            label2.Name = "label2";
+            label2.Size = new Size(186, 14);
+            label2.TabIndex = 14;
+            label2.Text = "Copyright DTCompany LTDA©";
             // 
             // pictureBox3
             // 
@@ -183,16 +194,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(18, 720);
-            label2.Name = "label2";
-            label2.Size = new Size(147, 15);
-            label2.TabIndex = 14;
-            label2.Text = "Copyrigth DTCompany Inc";
             // 
             // Form1
             // 
