@@ -292,6 +292,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Estoque";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Estoque";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

@@ -294,6 +294,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Encomanda";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Encomanda";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
