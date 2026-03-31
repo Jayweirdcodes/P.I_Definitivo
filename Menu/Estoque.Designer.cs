@@ -35,8 +35,8 @@
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
-            button1 = new Button();
-            button2 = new Button();
+            btnEncoEstoque = new Button();
+            btnMenuEstoque = new Button();
             panel3 = new Panel();
             dataGridView1 = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
@@ -86,8 +86,8 @@
             panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(pictureBox1);
-            panel2.Controls.Add(button1);
-            panel2.Controls.Add(button2);
+            panel2.Controls.Add(btnEncoEstoque);
+            panel2.Controls.Add(btnMenuEstoque);
             panel2.Controls.Add(panel3);
             panel2.Location = new Point(-6, -4);
             panel2.Name = "panel2";
@@ -124,29 +124,31 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // button1
+            // btnEncoEstoque
             // 
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(3, 212);
-            button1.Name = "button1";
-            button1.Size = new Size(197, 66);
-            button1.TabIndex = 4;
-            button1.Text = "        Encomendas";
-            button1.UseVisualStyleBackColor = true;
+            btnEncoEstoque.FlatStyle = FlatStyle.Popup;
+            btnEncoEstoque.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEncoEstoque.ForeColor = Color.White;
+            btnEncoEstoque.Location = new Point(3, 212);
+            btnEncoEstoque.Name = "btnEncoEstoque";
+            btnEncoEstoque.Size = new Size(197, 66);
+            btnEncoEstoque.TabIndex = 4;
+            btnEncoEstoque.Text = "        Encomendas";
+            btnEncoEstoque.UseVisualStyleBackColor = true;
+            btnEncoEstoque.Click += btnEncoEstoque_Click;
             // 
-            // button2
+            // btnMenuEstoque
             // 
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(3, 408);
-            button2.Name = "button2";
-            button2.Size = new Size(197, 66);
-            button2.TabIndex = 2;
-            button2.Text = "Menu";
-            button2.UseVisualStyleBackColor = true;
+            btnMenuEstoque.FlatStyle = FlatStyle.Popup;
+            btnMenuEstoque.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnMenuEstoque.ForeColor = Color.White;
+            btnMenuEstoque.Location = new Point(3, 408);
+            btnMenuEstoque.Name = "btnMenuEstoque";
+            btnMenuEstoque.Size = new Size(197, 66);
+            btnMenuEstoque.TabIndex = 2;
+            btnMenuEstoque.Text = "Menu";
+            btnMenuEstoque.UseVisualStyleBackColor = true;
+            btnMenuEstoque.Click += btnMenuEstoque_Click;
             // 
             // panel3
             // 
@@ -307,8 +309,8 @@
         private Panel panel1;
         private Panel panel2;
         private Label label1;
-        private Button button1;
-        private Button button2;
+        private Button btnEncoEstoque;
+        private Button btnMenuEstoque;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private DataGridView dataGridView1;
