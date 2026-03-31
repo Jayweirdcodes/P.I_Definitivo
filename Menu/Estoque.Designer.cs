@@ -37,7 +37,13 @@
             pictureBox1 = new PictureBox();
             button1 = new Button();
             button2 = new Button();
+            panel3 = new Panel();
             dataGridView1 = new DataGridView();
+            ID = new DataGridViewTextBoxColumn();
+            Produto = new DataGridViewTextBoxColumn();
+            Quant = new DataGridViewTextBoxColumn();
+            Validade = new DataGridViewTextBoxColumn();
+            EmFalta = new DataGridViewTextBoxColumn();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
@@ -46,12 +52,6 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            ID = new DataGridViewTextBoxColumn();
-            Produto = new DataGridViewTextBoxColumn();
-            Quant = new DataGridViewTextBoxColumn();
-            Validade = new DataGridViewTextBoxColumn();
-            EmFalta = new DataGridViewTextBoxColumn();
-            panel3 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -145,8 +145,16 @@
             button2.Name = "button2";
             button2.Size = new Size(197, 66);
             button2.TabIndex = 2;
-            button2.Text = "Voltar";
+            button2.Text = "Menu";
             button2.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.OrangeRed;
+            panel3.Location = new Point(90, 135);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(16, 567);
+            panel3.TabIndex = 11;
             // 
             // dataGridView1
             // 
@@ -157,6 +165,38 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(1020, 453);
             dataGridView1.TabIndex = 2;
+            // 
+            // ID
+            // 
+            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            ID.HeaderText = "ID";
+            ID.Name = "ID";
+            ID.Width = 43;
+            // 
+            // Produto
+            // 
+            Produto.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Produto.HeaderText = "Produto";
+            Produto.Name = "Produto";
+            // 
+            // Quant
+            // 
+            Quant.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Quant.HeaderText = "Quant";
+            Quant.Name = "Quant";
+            // 
+            // Validade
+            // 
+            Validade.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Validade.HeaderText = "Validade";
+            Validade.Name = "Validade";
+            // 
+            // EmFalta
+            // 
+            EmFalta.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            EmFalta.HeaderText = "EmFalta";
+            EmFalta.Name = "EmFalta";
+            EmFalta.Width = 74;
             // 
             // textBox1
             // 
@@ -230,46 +270,6 @@
             label4.Size = new Size(143, 15);
             label4.TabIndex = 10;
             label4.Text = "DATA DE VALIDADE";
-            // 
-            // ID
-            // 
-            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            ID.HeaderText = "ID";
-            ID.Name = "ID";
-            ID.Width = 43;
-            // 
-            // Produto
-            // 
-            Produto.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Produto.HeaderText = "Produto";
-            Produto.Name = "Produto";
-            // 
-            // Quant
-            // 
-            Quant.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Quant.HeaderText = "Quant";
-            Quant.Name = "Quant";
-            // 
-            // Validade
-            // 
-            Validade.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Validade.HeaderText = "Validade";
-            Validade.Name = "Validade";
-            // 
-            // EmFalta
-            // 
-            EmFalta.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            EmFalta.HeaderText = "EmFalta";
-            EmFalta.Name = "EmFalta";
-            EmFalta.Width = 74;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.OrangeRed;
-            panel3.Location = new Point(90, 135);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(16, 567);
-            panel3.TabIndex = 11;
             // 
             // Estoque
             // 
