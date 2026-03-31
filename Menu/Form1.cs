@@ -21,5 +21,24 @@ namespace Menu
         {
 
         }
+
+        private void btnEstoqueMenu_Click(object sender, EventArgs e)
+        {
+            Estoque telaEestoque = new Estoque();
+            telaEestoque.Show();
+            this.Hide();
+        }
+
+        private void btnEncoMenu_Click(object sender, EventArgs e)
+        {
+            Encomanda telaEnco = new Encomanda();
+            telaEnco.Show();
+            this.Hide();
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

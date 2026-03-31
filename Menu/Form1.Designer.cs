@@ -35,11 +35,11 @@
             label2 = new Label();
             pictureBox3 = new PictureBox();
             pictureBox5 = new PictureBox();
-            button2 = new Button();
+            btnFechar = new Button();
             pictureBox4 = new PictureBox();
             pictureBox2 = new PictureBox();
-            button3 = new Button();
-            button1 = new Button();
+            btnEncoMenu = new Button();
+            btnEstoqueMenu = new Button();
             panel3 = new Panel();
             pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
@@ -77,11 +77,11 @@
             panel2.Controls.Add(label2);
             panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(pictureBox5);
-            panel2.Controls.Add(button2);
+            panel2.Controls.Add(btnFechar);
             panel2.Controls.Add(pictureBox4);
             panel2.Controls.Add(pictureBox2);
-            panel2.Controls.Add(button3);
-            panel2.Controls.Add(button1);
+            panel2.Controls.Add(btnEncoMenu);
+            panel2.Controls.Add(btnEstoqueMenu);
             panel2.Controls.Add(panel3);
             panel2.Location = new Point(-6, -4);
             panel2.Name = "panel2";
@@ -120,17 +120,18 @@
             pictureBox5.TabIndex = 11;
             pictureBox5.TabStop = false;
             // 
-            // button2
+            // btnFechar
             // 
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Times New Roman", 15.75F);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(3, 493);
-            button2.Name = "button2";
-            button2.Size = new Size(197, 66);
-            button2.TabIndex = 10;
-            button2.Text = "  Fechar";
-            button2.UseVisualStyleBackColor = true;
+            btnFechar.FlatStyle = FlatStyle.Popup;
+            btnFechar.Font = new Font("Times New Roman", 15.75F);
+            btnFechar.ForeColor = Color.White;
+            btnFechar.Location = new Point(3, 493);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(197, 66);
+            btnFechar.TabIndex = 10;
+            btnFechar.Text = "  Fechar";
+            btnFechar.UseVisualStyleBackColor = true;
+            btnFechar.Click += btnFechar_Click;
             // 
             // pictureBox4
             // 
@@ -152,29 +153,31 @@
             pictureBox2.TabIndex = 6;
             pictureBox2.TabStop = false;
             // 
-            // button3
+            // btnEncoMenu
             // 
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Font = new Font("Times New Roman", 15.75F);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(3, 363);
-            button3.Name = "button3";
-            button3.Size = new Size(197, 66);
-            button3.TabIndex = 4;
-            button3.Text = "        Encomendas";
-            button3.UseVisualStyleBackColor = true;
+            btnEncoMenu.FlatStyle = FlatStyle.Popup;
+            btnEncoMenu.Font = new Font("Times New Roman", 15.75F);
+            btnEncoMenu.ForeColor = Color.White;
+            btnEncoMenu.Location = new Point(3, 363);
+            btnEncoMenu.Name = "btnEncoMenu";
+            btnEncoMenu.Size = new Size(197, 66);
+            btnEncoMenu.TabIndex = 4;
+            btnEncoMenu.Text = "        Encomendas";
+            btnEncoMenu.UseVisualStyleBackColor = true;
+            btnEncoMenu.Click += btnEncoMenu_Click;
             // 
-            // button1
+            // btnEstoqueMenu
             // 
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Times New Roman", 15.75F);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(3, 221);
-            button1.Name = "button1";
-            button1.Size = new Size(197, 66);
-            button1.TabIndex = 2;
-            button1.Text = "      Estoque";
-            button1.UseVisualStyleBackColor = true;
+            btnEstoqueMenu.FlatStyle = FlatStyle.Popup;
+            btnEstoqueMenu.Font = new Font("Times New Roman", 15.75F);
+            btnEstoqueMenu.ForeColor = Color.White;
+            btnEstoqueMenu.Location = new Point(3, 221);
+            btnEstoqueMenu.Name = "btnEstoqueMenu";
+            btnEstoqueMenu.Size = new Size(197, 66);
+            btnEstoqueMenu.TabIndex = 2;
+            btnEstoqueMenu.Text = "      Estoque";
+            btnEstoqueMenu.UseVisualStyleBackColor = true;
+            btnEstoqueMenu.Click += btnEstoqueMenu_Click;
             // 
             // panel3
             // 
@@ -226,11 +229,11 @@
         private Panel panel2;
         private Label label1;
         private PictureBox pictureBox1;
-        private Button button3;
-        private Button button1;
+        private Button btnEncoMenu;
+        private Button btnEstoqueMenu;
         private PictureBox pictureBox4;
         private PictureBox pictureBox2;
-        private Button button2;
+        private Button btnFechar;
         private PictureBox pictureBox5;
         private PictureBox pictureBox3;
         private Panel panel3;
