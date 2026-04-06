@@ -13,6 +13,7 @@ namespace Menu
 {
     public partial class Encomanda : Form
     {
+        string conexao = "Server=localhost;Database=encomendas;Uid=root;Pwd=;";
         public Encomanda()
         {
             InitializeComponent();
@@ -75,6 +76,11 @@ namespace Menu
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConfirmarPed_Click(object sender, EventArgs e)
         {
 
         }

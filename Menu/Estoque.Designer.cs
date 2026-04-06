@@ -42,12 +42,12 @@
             txtNomeProduto = new TextBox();
             txtQuant = new TextBox();
             txtValidade = new TextBox();
-            button3 = new Button();
-            button4 = new Button();
+            btnAdicionarEstoque = new Button();
+            btnRemoveEstoque = new Button();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            button1 = new Button();
+            btnAttEstoque = new Button();
             txtID = new TextBox();
             label5 = new Label();
             panel4 = new Panel();
@@ -188,29 +188,29 @@
             txtValidade.Size = new Size(172, 23);
             txtValidade.TabIndex = 5;
             // 
-            // button3
+            // btnAdicionarEstoque
             // 
-            button3.FlatStyle = FlatStyle.System;
-            button3.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(900, 191);
-            button3.Name = "button3";
-            button3.Size = new Size(101, 30);
-            button3.TabIndex = 6;
-            button3.Text = "ADICIONAR";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            btnAdicionarEstoque.FlatStyle = FlatStyle.System;
+            btnAdicionarEstoque.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAdicionarEstoque.Location = new Point(900, 191);
+            btnAdicionarEstoque.Name = "btnAdicionarEstoque";
+            btnAdicionarEstoque.Size = new Size(101, 30);
+            btnAdicionarEstoque.TabIndex = 6;
+            btnAdicionarEstoque.Text = "ADICIONAR";
+            btnAdicionarEstoque.UseVisualStyleBackColor = true;
+            btnAdicionarEstoque.Click += btnAdicionarEstoque_Click;
             // 
-            // button4
+            // btnRemoveEstoque
             // 
-            button4.FlatStyle = FlatStyle.System;
-            button4.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.Location = new Point(1189, 192);
-            button4.Name = "button4";
-            button4.Size = new Size(90, 30);
-            button4.TabIndex = 7;
-            button4.Text = "REMOVER";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            btnRemoveEstoque.FlatStyle = FlatStyle.System;
+            btnRemoveEstoque.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRemoveEstoque.Location = new Point(1189, 192);
+            btnRemoveEstoque.Name = "btnRemoveEstoque";
+            btnRemoveEstoque.Size = new Size(90, 30);
+            btnRemoveEstoque.TabIndex = 7;
+            btnRemoveEstoque.Text = "REMOVER";
+            btnRemoveEstoque.UseVisualStyleBackColor = true;
+            btnRemoveEstoque.Click += btnRemoveEstoque_Click;
             // 
             // label2
             // 
@@ -242,17 +242,17 @@
             label4.TabIndex = 10;
             label4.Text = "DATA DE VALIDADE";
             // 
-            // button1
+            // btnAttEstoque
             // 
-            button1.FlatStyle = FlatStyle.System;
-            button1.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(260, 235);
-            button1.Name = "button1";
-            button1.Size = new Size(92, 30);
-            button1.TabIndex = 11;
-            button1.Text = "ATUALIZAR";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnAttEstoque.FlatStyle = FlatStyle.System;
+            btnAttEstoque.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAttEstoque.Location = new Point(260, 235);
+            btnAttEstoque.Name = "btnAttEstoque";
+            btnAttEstoque.Size = new Size(92, 30);
+            btnAttEstoque.TabIndex = 11;
+            btnAttEstoque.Text = "ATUALIZAR";
+            btnAttEstoque.UseVisualStyleBackColor = true;
+            btnAttEstoque.Click += btnAttEstoque_Click;
             // 
             // txtID
             // 
@@ -298,12 +298,12 @@
             ClientSize = new Size(1347, 776);
             Controls.Add(label5);
             Controls.Add(txtID);
-            Controls.Add(button1);
+            Controls.Add(btnAttEstoque);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(button4);
-            Controls.Add(button3);
+            Controls.Add(btnRemoveEstoque);
+            Controls.Add(btnAdicionarEstoque);
             Controls.Add(txtValidade);
             Controls.Add(txtQuant);
             Controls.Add(txtNomeProduto);
@@ -341,13 +341,13 @@
         private TextBox txtNomeProduto;
         private TextBox txtQuant;
         private TextBox txtValidade;
-        private Button button3;
-        private Button button4;
+        private Button btnAdicionarEstoque;
+        private Button btnRemoveEstoque;
         private Label label2;
         private Label label3;
         private Label label4;
         private Panel panel3;
-        private Button button1;
+        private Button btnAttEstoque;
         private TextBox txtID;
         private Label label5;
         private Panel panel4;

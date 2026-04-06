@@ -33,7 +33,7 @@ namespace Menu
             this.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnAdicionarEstoque_Click(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection(conexao);
             try
@@ -58,7 +58,7 @@ namespace Menu
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAttEstoque_Click(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection(conexao);
             try
@@ -80,17 +80,9 @@ namespace Menu
             catch (Exception ex) { }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnRemoveEstoque_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection(conexao);
-            try
-            {
-                conn.Open();
-                string sql = "delete from * @id";
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-                MySqlDataReader dr = cmd.ExecuteReader();
-            }
-            catch (Exception ex) { }
+           
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

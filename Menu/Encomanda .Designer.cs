@@ -45,7 +45,7 @@
             textBox3 = new TextBox();
             textBox1 = new TextBox();
             label9 = new Label();
-            button13 = new Button();
+            btnConfirmarPed = new Button();
             dataGridView1 = new DataGridView();
             Pedido = new DataGridViewTextBoxColumn();
             Quantidade = new DataGridViewTextBoxColumn();
@@ -60,7 +60,7 @@
             panel6 = new Panel();
             textBox2 = new TextBox();
             label2 = new Label();
-            button4 = new Button();
+            btnConfirmarObs = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -202,7 +202,7 @@
             panel5.Controls.Add(textBox3);
             panel5.Controls.Add(textBox1);
             panel5.Controls.Add(label9);
-            panel5.Controls.Add(button13);
+            panel5.Controls.Add(btnConfirmarPed);
             panel5.Location = new Point(563, 282);
             panel5.Name = "panel5";
             panel5.Size = new Size(273, 201);
@@ -248,17 +248,18 @@
             label9.Text = "Pedidos";
             label9.Click += label9_Click;
             // 
-            // button13
+            // btnConfirmarPed
             // 
-            button13.BackColor = Color.LightGray;
-            button13.FlatStyle = FlatStyle.Popup;
-            button13.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button13.Location = new Point(36, 149);
-            button13.Name = "button13";
-            button13.Size = new Size(200, 31);
-            button13.TabIndex = 14;
-            button13.Text = "Confirmar ";
-            button13.UseVisualStyleBackColor = false;
+            btnConfirmarPed.BackColor = Color.LightGray;
+            btnConfirmarPed.FlatStyle = FlatStyle.Popup;
+            btnConfirmarPed.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnConfirmarPed.Location = new Point(36, 149);
+            btnConfirmarPed.Name = "btnConfirmarPed";
+            btnConfirmarPed.Size = new Size(200, 31);
+            btnConfirmarPed.TabIndex = 14;
+            btnConfirmarPed.Text = "Confirmar ";
+            btnConfirmarPed.UseVisualStyleBackColor = false;
+            btnConfirmarPed.Click += btnConfirmarPed_Click;
             // 
             // dataGridView1
             // 
@@ -381,7 +382,7 @@
             panel6.BackColor = Color.WhiteSmoke;
             panel6.Controls.Add(textBox2);
             panel6.Controls.Add(label2);
-            panel6.Controls.Add(button4);
+            panel6.Controls.Add(btnConfirmarObs);
             panel6.Location = new Point(563, 506);
             panel6.Name = "panel6";
             panel6.Size = new Size(273, 158);
@@ -406,17 +407,17 @@
             label2.TabIndex = 19;
             label2.Text = "Observação";
             // 
-            // button4
+            // btnConfirmarObs
             // 
-            button4.BackColor = Color.LightGray;
-            button4.FlatStyle = FlatStyle.Popup;
-            button4.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.Location = new Point(36, 82);
-            button4.Name = "button4";
-            button4.Size = new Size(200, 31);
-            button4.TabIndex = 14;
-            button4.Text = "Confirmar ";
-            button4.UseVisualStyleBackColor = false;
+            btnConfirmarObs.BackColor = Color.LightGray;
+            btnConfirmarObs.FlatStyle = FlatStyle.Popup;
+            btnConfirmarObs.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnConfirmarObs.Location = new Point(36, 82);
+            btnConfirmarObs.Name = "btnConfirmarObs";
+            btnConfirmarObs.Size = new Size(200, 31);
+            btnConfirmarObs.TabIndex = 14;
+            btnConfirmarObs.Text = "Confirmar ";
+            btnConfirmarObs.UseVisualStyleBackColor = false;
             // 
             // Encomanda
             // 
@@ -468,7 +469,7 @@
         private Panel panel5;
         private TextBox textBox1;
         private Label label9;
-        private Button button13;
+        private Button btnConfirmarPed;
         private DataGridView dataGridView1;
         private Label label5;
         private Panel panel4;
@@ -481,7 +482,7 @@
         private Panel panel6;
         private TextBox textBox2;
         private Label label2;
-        private Button button4;
+        private Button btnConfirmarObs;
         private Label label3;
         private DataGridViewTextBoxColumn Pedido;
         private DataGridViewTextBoxColumn Quantidade;
