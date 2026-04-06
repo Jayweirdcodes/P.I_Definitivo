@@ -44,16 +44,18 @@ namespace Menu
 
                 cmd.Parameters.AddWithValue("@produto", txtNomeProduto.Text);
                 cmd.Parameters.AddWithValue("@quant", txtQuant.Text);
-                cmd.Parameters.AddWithValue("@validades", txtValidade.Text);
+                cmd.Parameters.AddWithValue("@validade", txtValidade.Text);
 
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("sucesso :D");
                 txtNomeProduto.Clear();
                 txtQuant.Clear();
                 txtValidade.Clear();
                 con.Close();
             }
-            catch { }
+            catch (Exception ex)
+            {
+                MessageBox.Show("sucesso :D");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -75,7 +77,7 @@ namespace Menu
                 //exibr no gridview
                 dgvTabelaEstoque.DataSource = dt;
             }
-            catch { }
+            catch (Exception ex){ }
         }
     }
 }
