@@ -48,6 +48,10 @@
             label3 = new Label();
             label4 = new Label();
             button1 = new Button();
+            txtID = new TextBox();
+            label5 = new Label();
+            panel4 = new Panel();
+            panel5 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -158,28 +162,28 @@
             // 
             dgvTabelaEstoque.AllowUserToOrderColumns = true;
             dgvTabelaEstoque.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTabelaEstoque.Location = new Point(260, 265);
+            dgvTabelaEstoque.Location = new Point(250, 273);
             dgvTabelaEstoque.Name = "dgvTabelaEstoque";
-            dgvTabelaEstoque.Size = new Size(1020, 453);
+            dgvTabelaEstoque.Size = new Size(1037, 453);
             dgvTabelaEstoque.TabIndex = 2;
             // 
             // txtNomeProduto
             // 
-            txtNomeProduto.Location = new Point(269, 196);
+            txtNomeProduto.Location = new Point(259, 197);
             txtNomeProduto.Name = "txtNomeProduto";
             txtNomeProduto.Size = new Size(231, 23);
             txtNomeProduto.TabIndex = 3;
             // 
             // txtQuant
             // 
-            txtQuant.Location = new Point(568, 196);
+            txtQuant.Location = new Point(527, 197);
             txtQuant.Name = "txtQuant";
             txtQuant.Size = new Size(124, 23);
             txtQuant.TabIndex = 4;
             // 
             // txtValidade
             // 
-            txtValidade.Location = new Point(776, 196);
+            txtValidade.Location = new Point(694, 197);
             txtValidade.Name = "txtValidade";
             txtValidade.Size = new Size(172, 23);
             txtValidade.TabIndex = 5;
@@ -188,7 +192,7 @@
             // 
             button3.FlatStyle = FlatStyle.System;
             button3.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(988, 190);
+            button3.Location = new Point(900, 191);
             button3.Name = "button3";
             button3.Size = new Size(101, 30);
             button3.TabIndex = 6;
@@ -200,7 +204,7 @@
             // 
             button4.FlatStyle = FlatStyle.System;
             button4.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.Location = new Point(1193, 189);
+            button4.Location = new Point(1189, 192);
             button4.Name = "button4";
             button4.Size = new Size(90, 30);
             button4.TabIndex = 7;
@@ -212,7 +216,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Georgia", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(269, 169);
+            label2.Location = new Point(259, 170);
             label2.Name = "label2";
             label2.Size = new Size(141, 15);
             label2.TabIndex = 8;
@@ -222,7 +226,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Georgia", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(568, 169);
+            label3.Location = new Point(527, 170);
             label3.Name = "label3";
             label3.Size = new Size(100, 15);
             label3.TabIndex = 9;
@@ -232,7 +236,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Georgia", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(776, 169);
+            label4.Location = new Point(694, 170);
             label4.Name = "label4";
             label4.Size = new Size(143, 15);
             label4.TabIndex = 10;
@@ -242,7 +246,7 @@
             // 
             button1.FlatStyle = FlatStyle.System;
             button1.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(1095, 190);
+            button1.Location = new Point(260, 235);
             button1.Name = "button1";
             button1.Size = new Size(92, 30);
             button1.TabIndex = 11;
@@ -250,12 +254,50 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // txtID
+            // 
+            txtID.Location = new Point(1071, 197);
+            txtID.Name = "txtID";
+            txtID.Size = new Size(100, 23);
+            txtID.TabIndex = 12;
+            txtID.TextChanged += textBox1_TextChanged;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Georgia", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(1071, 170);
+            label5.Name = "label5";
+            label5.Size = new Size(22, 15);
+            label5.TabIndex = 13;
+            label5.Text = "ID";
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.Snow;
+            panel4.BorderStyle = BorderStyle.FixedSingle;
+            panel4.Location = new Point(1064, 150);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(223, 78);
+            panel4.TabIndex = 14;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.Snow;
+            panel5.BorderStyle = BorderStyle.FixedSingle;
+            panel5.Location = new Point(250, 150);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(760, 78);
+            panel5.TabIndex = 15;
+            // 
             // Estoque
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(1347, 776);
+            Controls.Add(label5);
+            Controls.Add(txtID);
             Controls.Add(button1);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -268,6 +310,8 @@
             Controls.Add(dgvTabelaEstoque);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Controls.Add(panel4);
+            Controls.Add(panel5);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Estoque";
             StartPosition = FormStartPosition.CenterScreen;
@@ -304,5 +348,9 @@
         private Label label4;
         private Panel panel3;
         private Button button1;
+        private TextBox txtID;
+        private Label label5;
+        private Panel panel4;
+        private Panel panel5;
     }
 }

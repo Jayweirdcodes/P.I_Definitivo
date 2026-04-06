@@ -77,7 +77,7 @@ namespace Menu
                 //exibr no gridview
                 dgvTabelaEstoque.DataSource = dt;
             }
-            catch (Exception ex){ }
+            catch (Exception ex) { }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -89,7 +89,13 @@ namespace Menu
                 string sql = "delete from * @id";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader dr = cmd.ExecuteReader();
-            }catch (Exception ex){ }
+            }
+            catch (Exception ex) { }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
