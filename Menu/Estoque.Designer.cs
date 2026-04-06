@@ -206,6 +206,7 @@
             button4.TabIndex = 7;
             button4.Text = "REMOVER";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // label2
             // 

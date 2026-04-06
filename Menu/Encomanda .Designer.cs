@@ -41,26 +41,26 @@
             label4 = new Label();
             label6 = new Label();
             panel5 = new Panel();
-            button13 = new Button();
-            label9 = new Label();
+            label3 = new Label();
+            textBox3 = new TextBox();
             textBox1 = new TextBox();
+            label9 = new Label();
+            button13 = new Button();
             dataGridView1 = new DataGridView();
+            Pedido = new DataGridViewTextBoxColumn();
+            Quantidade = new DataGridViewTextBoxColumn();
+            Obs = new DataGridViewTextBoxColumn();
             label5 = new Label();
             panel4 = new Panel();
-            button3 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            button1 = new Button();
             button2 = new Button();
+            button1 = new Button();
+            button3 = new Button();
+            button8 = new Button();
+            button7 = new Button();
             panel6 = new Panel();
             textBox2 = new TextBox();
             label2 = new Label();
             button4 = new Button();
-            textBox3 = new TextBox();
-            label3 = new Label();
-            Pedido = new DataGridViewTextBoxColumn();
-            Quantidade = new DataGridViewTextBoxColumn();
-            Obs = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -208,17 +208,32 @@
             panel5.Size = new Size(273, 201);
             panel5.TabIndex = 20;
             // 
-            // button13
+            // label3
             // 
-            button13.BackColor = Color.LightGray;
-            button13.FlatStyle = FlatStyle.Popup;
-            button13.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button13.Location = new Point(36, 149);
-            button13.Name = "button13";
-            button13.Size = new Size(200, 31);
-            button13.TabIndex = 14;
-            button13.Text = "Confirmar ";
-            button13.UseVisualStyleBackColor = false;
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Georgia", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.Black;
+            label3.Location = new Point(55, 80);
+            label3.Name = "label3";
+            label3.Size = new Size(156, 31);
+            label3.TabIndex = 22;
+            label3.Text = "Quantidade";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(25, 114);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(221, 23);
+            textBox3.TabIndex = 21;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(25, 53);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(221, 23);
+            textBox1.TabIndex = 20;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label9
             // 
@@ -233,13 +248,17 @@
             label9.Text = "Pedidos";
             label9.Click += label9_Click;
             // 
-            // textBox1
+            // button13
             // 
-            textBox1.Location = new Point(25, 53);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(221, 23);
-            textBox1.TabIndex = 20;
-            textBox1.TextChanged += textBox1_TextChanged;
+            button13.BackColor = Color.LightGray;
+            button13.FlatStyle = FlatStyle.Popup;
+            button13.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button13.Location = new Point(36, 149);
+            button13.Name = "button13";
+            button13.Size = new Size(200, 31);
+            button13.TabIndex = 14;
+            button13.Text = "Confirmar ";
+            button13.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
@@ -249,6 +268,25 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(418, 409);
             dataGridView1.TabIndex = 21;
+            // 
+            // Pedido
+            // 
+            Pedido.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Pedido.HeaderText = "Pedido";
+            Pedido.Name = "Pedido";
+            // 
+            // Quantidade
+            // 
+            Quantidade.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            Quantidade.HeaderText = "Quantidade";
+            Quantidade.Name = "Quantidade";
+            Quantidade.Width = 94;
+            // 
+            // Obs
+            // 
+            Obs.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Obs.HeaderText = "Obs";
+            Obs.Name = "Obs";
             // 
             // label5
             // 
@@ -277,41 +315,17 @@
             panel4.TabIndex = 18;
             panel4.Paint += panel4_Paint;
             // 
-            // button3
+            // button2
             // 
-            button3.BackColor = Color.LightGray;
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(0, 59);
-            button3.Name = "button3";
-            button3.Size = new Size(200, 66);
-            button3.TabIndex = 6;
-            button3.Text = "Pizza de calabresa + coca2L";
-            button3.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            button7.BackColor = Color.LightGray;
-            button7.FlatStyle = FlatStyle.Popup;
-            button7.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button7.Location = new Point(0, 202);
-            button7.Name = "button7";
-            button7.Size = new Size(200, 66);
-            button7.TabIndex = 14;
-            button7.Text = "Pizza de frango + coca 2L";
-            button7.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            button8.BackColor = Color.LightGray;
-            button8.FlatStyle = FlatStyle.Popup;
-            button8.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button8.Location = new Point(0, 130);
-            button8.Name = "button8";
-            button8.Size = new Size(200, 66);
-            button8.TabIndex = 15;
-            button8.Text = "Pizza de queijo + coca 2L ";
-            button8.UseVisualStyleBackColor = false;
+            button2.BackColor = Color.LightGray;
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.Location = new Point(0, 346);
+            button2.Name = "button2";
+            button2.Size = new Size(200, 66);
+            button2.TabIndex = 23;
+            button2.Text = "Pizza de Banana + Pepsi 2L";
+            button2.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -325,17 +339,42 @@
             button1.Text = "Pizza de Chocolate + Sprite 2L";
             button1.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // button3
             // 
-            button2.BackColor = Color.LightGray;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(0, 346);
-            button2.Name = "button2";
-            button2.Size = new Size(200, 66);
-            button2.TabIndex = 23;
-            button2.Text = "Pizza de Banana + Pepsi 2L";
-            button2.UseVisualStyleBackColor = false;
+            button3.BackColor = Color.LightGray;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.Location = new Point(0, 59);
+            button3.Name = "button3";
+            button3.Size = new Size(200, 66);
+            button3.TabIndex = 6;
+            button3.Text = "Pizza de calabresa + coca2L";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
+            // button8
+            // 
+            button8.BackColor = Color.LightGray;
+            button8.FlatStyle = FlatStyle.Popup;
+            button8.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button8.Location = new Point(0, 130);
+            button8.Name = "button8";
+            button8.Size = new Size(200, 66);
+            button8.TabIndex = 15;
+            button8.Text = "Pizza de queijo + coca 2L ";
+            button8.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            button7.BackColor = Color.LightGray;
+            button7.FlatStyle = FlatStyle.Popup;
+            button7.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button7.Location = new Point(0, 202);
+            button7.Name = "button7";
+            button7.Size = new Size(200, 66);
+            button7.TabIndex = 14;
+            button7.Text = "Pizza de frango + coca 2L";
+            button7.UseVisualStyleBackColor = false;
             // 
             // panel6
             // 
@@ -378,44 +417,6 @@
             button4.TabIndex = 14;
             button4.Text = "Confirmar ";
             button4.UseVisualStyleBackColor = false;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(25, 114);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(221, 23);
-            textBox3.TabIndex = 21;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Georgia", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Black;
-            label3.Location = new Point(55, 80);
-            label3.Name = "label3";
-            label3.Size = new Size(156, 31);
-            label3.TabIndex = 22;
-            label3.Text = "Quantidade";
-            // 
-            // Pedido
-            // 
-            Pedido.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Pedido.HeaderText = "Pedido";
-            Pedido.Name = "Pedido";
-            // 
-            // Quantidade
-            // 
-            Quantidade.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            Quantidade.HeaderText = "Quantidade";
-            Quantidade.Name = "Quantidade";
-            Quantidade.Width = 94;
-            // 
-            // Obs
-            // 
-            Obs.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Obs.HeaderText = "Obs";
-            Obs.Name = "Obs";
             // 
             // Encomanda
             // 
@@ -460,7 +461,6 @@
         private Label label1;
         private Button BtnMenuEnco;
         private Button btnEstoqueEnco;
-        private Panel panel3;
         private Label label4;
         private PictureBox pictureBox3;
         private PictureBox pictureBox1;
@@ -486,5 +486,6 @@
         private DataGridViewTextBoxColumn Pedido;
         private DataGridViewTextBoxColumn Quantidade;
         private DataGridViewTextBoxColumn Obs;
+        private Panel panel3;
     }
 }

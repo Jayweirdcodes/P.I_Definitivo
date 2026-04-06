@@ -39,19 +39,19 @@ namespace Menu
             try
             {
                 con.Open();
-                string sql = "INSERT INTO produtos(produto, quant, validade) VALUES (@produto,@quant,@validade)";
+                string sql = "INSERT INTO produtos (produto, quant, validade) VALUES (@produto,@quant,@validade)";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
 
                 cmd.Parameters.AddWithValue("@produto", txtNomeProduto.Text);
                 cmd.Parameters.AddWithValue("@quant", txtQuant.Text);
-                cmd.Parameters.AddWithValue("@validades", txtValidade.Text);
+                cmd.Parameters.AddWithValue("@validade", txtValidade.Text);
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("sucesso :D");
                 txtNomeProduto.Clear();
                 txtQuant.Clear();
                 txtValidade.Clear();
-                con.Close();
+
             }
             catch { }
         }
@@ -76,6 +76,18 @@ namespace Menu
                 dgvTabelaEstoque.DataSource = dt;
             }
             catch { }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conn = new MySqlConnection(conexao);
+            try
+            {
+                conn.Open();
+                string sql = "delete from * @id";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader dr = cmd.ExecuteReader();
+            }catch (Exception ex){ }
         }
     }
 }
