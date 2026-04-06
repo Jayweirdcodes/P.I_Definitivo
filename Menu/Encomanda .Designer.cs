@@ -46,7 +46,7 @@
             textBox1 = new TextBox();
             label9 = new Label();
             btnConfirmarPed = new Button();
-            dataGridView1 = new DataGridView();
+            dgvEncomendas = new DataGridView();
             Pedido = new DataGridViewTextBoxColumn();
             Quantidade = new DataGridViewTextBoxColumn();
             Obs = new DataGridViewTextBoxColumn();
@@ -67,7 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvEncomendas).BeginInit();
             panel4.SuspendLayout();
             panel6.SuspendLayout();
             SuspendLayout();
@@ -261,14 +261,14 @@
             btnConfirmarPed.UseVisualStyleBackColor = false;
             btnConfirmarPed.Click += btnConfirmarPed_Click;
             // 
-            // dataGridView1
+            // dgvEncomendas
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Pedido, Quantidade, Obs });
-            dataGridView1.Location = new Point(892, 282);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(418, 409);
-            dataGridView1.TabIndex = 21;
+            dgvEncomendas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvEncomendas.Columns.AddRange(new DataGridViewColumn[] { Pedido, Quantidade, Obs });
+            dgvEncomendas.Location = new Point(892, 282);
+            dgvEncomendas.Name = "dgvEncomendas";
+            dgvEncomendas.Size = new Size(418, 409);
+            dgvEncomendas.TabIndex = 21;
             // 
             // Pedido
             // 
@@ -427,7 +427,7 @@
             ClientSize = new Size(1347, 776);
             Controls.Add(panel6);
             Controls.Add(label6);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvEncomendas);
             Controls.Add(panel5);
             Controls.Add(panel4);
             Controls.Add(label4);
@@ -445,7 +445,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvEncomendas).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             panel6.ResumeLayout(false);
@@ -470,7 +470,7 @@
         private TextBox textBox1;
         private Label label9;
         private Button btnConfirmarPed;
-        private DataGridView dataGridView1;
+        private DataGridView dgvEncomendas;
         private Label label5;
         private Panel panel4;
         private Button button3;

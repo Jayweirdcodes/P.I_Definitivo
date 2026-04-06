@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -77,7 +78,23 @@ namespace Menu
 
         private void button3_Click(object sender, EventArgs e)
         {
+            MySqlConnection conn = new MySqlConnection(conexao);
+            try
+            {
 
+
+                conn.Open();
+
+                string sql = "insert into combos (c1) values (combo 1 )";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataAdapter ba = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                ba.Fill(dt);
+                dgvEncomendas.DataSource = dt;
+
+
+            }
+            catch (Exception ex) { }
         }
 
         private void btnConfirmarPed_Click(object sender, EventArgs e)
