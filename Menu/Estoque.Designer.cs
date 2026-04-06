@@ -39,11 +39,6 @@
             btnMenuEstoque = new Button();
             panel3 = new Panel();
             dgvTabelaEstoque = new DataGridView();
-            ID = new DataGridViewTextBoxColumn();
-            Produto = new DataGridViewTextBoxColumn();
-            Quant = new DataGridViewTextBoxColumn();
-            Validade = new DataGridViewTextBoxColumn();
-            EmFalta = new DataGridViewTextBoxColumn();
             txtNomeProduto = new TextBox();
             txtQuant = new TextBox();
             txtValidade = new TextBox();
@@ -52,6 +47,7 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            button1 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -162,43 +158,10 @@
             // 
             dgvTabelaEstoque.AllowUserToOrderColumns = true;
             dgvTabelaEstoque.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTabelaEstoque.Columns.AddRange(new DataGridViewColumn[] { ID, Produto, Quant, Validade, EmFalta });
             dgvTabelaEstoque.Location = new Point(260, 265);
             dgvTabelaEstoque.Name = "dgvTabelaEstoque";
             dgvTabelaEstoque.Size = new Size(1020, 453);
             dgvTabelaEstoque.TabIndex = 2;
-            // 
-            // ID
-            // 
-            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            ID.HeaderText = "ID";
-            ID.Name = "ID";
-            ID.Width = 43;
-            // 
-            // Produto
-            // 
-            Produto.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Produto.HeaderText = "Produto";
-            Produto.Name = "Produto";
-            // 
-            // Quant
-            // 
-            Quant.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Quant.HeaderText = "Quant";
-            Quant.Name = "Quant";
-            // 
-            // Validade
-            // 
-            Validade.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Validade.HeaderText = "Validade";
-            Validade.Name = "Validade";
-            // 
-            // EmFalta
-            // 
-            EmFalta.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            EmFalta.HeaderText = "EmFalta";
-            EmFalta.Name = "EmFalta";
-            EmFalta.Width = 74;
             // 
             // txtNomeProduto
             // 
@@ -225,18 +188,19 @@
             // 
             button3.FlatStyle = FlatStyle.System;
             button3.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(1033, 190);
+            button3.Location = new Point(988, 190);
             button3.Name = "button3";
             button3.Size = new Size(101, 30);
             button3.TabIndex = 6;
             button3.Text = "ADICIONAR";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
             button4.FlatStyle = FlatStyle.System;
             button4.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.Location = new Point(1152, 190);
+            button4.Location = new Point(1193, 189);
             button4.Name = "button4";
             button4.Size = new Size(90, 30);
             button4.TabIndex = 7;
@@ -273,12 +237,25 @@
             label4.TabIndex = 10;
             label4.Text = "DATA DE VALIDADE";
             // 
+            // button1
+            // 
+            button1.FlatStyle = FlatStyle.System;
+            button1.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(1095, 190);
+            button1.Name = "button1";
+            button1.Size = new Size(92, 30);
+            button1.TabIndex = 11;
+            button1.Text = "ATUALIZAR";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Estoque
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(1347, 776);
+            Controls.Add(button1);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -324,11 +301,7 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private DataGridViewTextBoxColumn ID;
-        private DataGridViewTextBoxColumn Produto;
-        private DataGridViewTextBoxColumn Quant;
-        private DataGridViewTextBoxColumn Validade;
-        private DataGridViewTextBoxColumn EmFalta;
         private Panel panel3;
+        private Button button1;
     }
 }

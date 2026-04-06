@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Menu
 {
     public partial class Estoque : Form
     {
+        string conexao = "Server=localhost;Database=estoque;Uid=root;Pwd=;";
         public Estoque()
         {
             InitializeComponent();
@@ -29,6 +31,51 @@ namespace Menu
             Form1 telaMenu = new Form1();
             telaMenu.Show();
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MySqlConnection con = new MySqlConnection(conexao);
+            try
+            {
+                con.Open();
+                string sql = "INSERT INTO produtos(produto, quant, validade) VALUES (@produto,@quant,@validade)";
+                MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                cmd.Parameters.AddWithValue("@produto", txtNomeProduto.Text);
+                cmd.Parameters.AddWithValue("@quant", txtQuant.Text);
+                cmd.Parameters.AddWithValue("@validades", txtValidade.Text);
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("sucesso :D");
+                txtNomeProduto.Clear();
+                txtQuant.Clear();
+                txtValidade.Clear();
+                con.Close();
+            }
+            catch { }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MySqlConnection con = new MySqlConnection(conexao);
+            try
+            {
+                con.Open();
+                //select procura e seleciona todos
+                string sql = "SELECT * FROM produtos";
+                MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                // DAtaAdapter sera a ponte para visualizar
+                MySqlDataAdapter banco = new MySqlDataAdapter(cmd);
+
+                //Criando uma tabela na memorira C#
+                DataTable dt = new DataTable();
+                banco.Fill(dt);
+                //exibr no gridview
+                dgvTabelaEstoque.DataSource = dt;
+            }
+            catch { }
         }
     }
 }
