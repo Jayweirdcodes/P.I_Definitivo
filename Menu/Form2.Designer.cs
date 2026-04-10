@@ -46,12 +46,12 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            button1 = new Button();
-            dgvEncomendas = new DataGridView();
+            txtTelefone = new TextBox();
+            txtCPF = new TextBox();
+            txtNome = new TextBox();
+            txtEndereço = new TextBox();
+            btnSalvar = new Button();
+            dgvClientes = new DataGridView();
             Pedido = new DataGridViewTextBoxColumn();
             Quantidade = new DataGridViewTextBoxColumn();
             Obs = new DataGridViewTextBoxColumn();
@@ -63,7 +63,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvEncomendas).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvClientes).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -259,52 +259,53 @@
             label5.TabIndex = 7;
             label5.Text = "Endereço";
             // 
-            // textBox1
+            // txtTelefone
             // 
-            textBox1.Location = new Point(339, 269);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(235, 23);
-            textBox1.TabIndex = 8;
+            txtTelefone.Location = new Point(339, 269);
+            txtTelefone.Name = "txtTelefone";
+            txtTelefone.Size = new Size(235, 23);
+            txtTelefone.TabIndex = 8;
             // 
-            // textBox2
+            // txtCPF
             // 
-            textBox2.Location = new Point(339, 214);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(235, 23);
-            textBox2.TabIndex = 9;
+            txtCPF.Location = new Point(339, 214);
+            txtCPF.Name = "txtCPF";
+            txtCPF.Size = new Size(235, 23);
+            txtCPF.TabIndex = 9;
             // 
-            // textBox3
+            // txtNome
             // 
-            textBox3.Location = new Point(339, 166);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(342, 23);
-            textBox3.TabIndex = 10;
+            txtNome.Location = new Point(339, 166);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(342, 23);
+            txtNome.TabIndex = 10;
             // 
-            // textBox4
+            // txtEndereço
             // 
-            textBox4.Location = new Point(339, 316);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(461, 23);
-            textBox4.TabIndex = 11;
+            txtEndereço.Location = new Point(339, 316);
+            txtEndereço.Name = "txtEndereço";
+            txtEndereço.Size = new Size(461, 23);
+            txtEndereço.TabIndex = 11;
             // 
-            // button1
+            // btnSalvar
             // 
-            button1.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(339, 383);
-            button1.Name = "button1";
-            button1.Size = new Size(100, 44);
-            button1.TabIndex = 13;
-            button1.Text = "salvar";
-            button1.UseVisualStyleBackColor = true;
+            btnSalvar.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSalvar.Location = new Point(339, 383);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(100, 44);
+            btnSalvar.TabIndex = 13;
+            btnSalvar.Text = "salvar";
+            btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
             // 
-            // dgvEncomendas
+            // dgvClientes
             // 
-            dgvEncomendas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvEncomendas.Columns.AddRange(new DataGridViewColumn[] { Pedido, Quantidade, Obs });
-            dgvEncomendas.Location = new Point(872, 235);
-            dgvEncomendas.Name = "dgvEncomendas";
-            dgvEncomendas.Size = new Size(418, 409);
-            dgvEncomendas.TabIndex = 22;
+            dgvClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvClientes.Columns.AddRange(new DataGridViewColumn[] { Pedido, Quantidade, Obs });
+            dgvClientes.Location = new Point(872, 235);
+            dgvClientes.Name = "dgvClientes";
+            dgvClientes.Size = new Size(418, 409);
+            dgvClientes.TabIndex = 22;
             // 
             // Pedido
             // 
@@ -342,12 +343,12 @@
             BackColor = Color.SeaShell;
             ClientSize = new Size(1331, 737);
             Controls.Add(label6);
-            Controls.Add(dgvEncomendas);
-            Controls.Add(button1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(dgvClientes);
+            Controls.Add(btnSalvar);
+            Controls.Add(txtEndereço);
+            Controls.Add(txtNome);
+            Controls.Add(txtCPF);
+            Controls.Add(txtTelefone);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -367,7 +368,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvEncomendas).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvClientes).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -391,12 +392,12 @@
         private Label label3;
         private Label label4;
         private Label label5;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private Button button1;
-        private DataGridView dgvEncomendas;
+        private TextBox txtTelefone;
+        private TextBox txtCPF;
+        private TextBox txtNome;
+        private TextBox txtEndereço;
+        private Button btnSalvar;
+        private DataGridView dgvClientes;
         private DataGridViewTextBoxColumn Pedido;
         private DataGridViewTextBoxColumn Quantidade;
         private DataGridViewTextBoxColumn Obs;
