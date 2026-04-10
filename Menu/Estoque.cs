@@ -13,7 +13,7 @@ namespace Menu
 {
     public partial class Estoque : Form
     {
-        string conexao = "Server=localhost;Database=estoque;Uid=root;Pwd=;";
+        string conexao = "Server=localhost;Database=pizzaria;Uid=root;Pwd=;";
         public Estoque()
         {
             InitializeComponent();
@@ -28,8 +28,6 @@ namespace Menu
 
         private void btnMenuEstoque_Click(object sender, EventArgs e)
         {
-            Form1 telaMenu = new Form1();
-            telaMenu.Show();
             this.Close();
         }
 
@@ -39,7 +37,7 @@ namespace Menu
             try
             {
                 con.Open();
-                string sql = "INSERT INTO produtos (produto, quant, validade) VALUES (@produto,@quant,@validade)";
+                string sql = "INSERT INTO estoque (produto, quant, validade) VALUES (@produto,@quant,@validade)";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
 
                 cmd.Parameters.AddWithValue("@produto", txtNomeProduto.Text);
@@ -65,7 +63,7 @@ namespace Menu
             {
                 con.Open();
                 //select procura e seleciona todos
-                string sql = "SELECT * FROM produtos";
+                string sql = "SELECT * FROM estoque";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
 
                 // DAtaAdapter sera a ponte para visualizar
@@ -82,12 +80,19 @@ namespace Menu
 
         private void btnRemoveEstoque_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCadastroEstoque_Click(object sender, EventArgs e)
+        {
+            Form2 telaCadastro = new Form2();
+            telaCadastro.Show();
+            this.Close();
         }
     }
 }
