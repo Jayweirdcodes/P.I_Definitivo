@@ -42,6 +42,8 @@
             btnEstoqueMenu = new Button();
             panel3 = new Panel();
             pictureBox1 = new PictureBox();
+            button1 = new Button();
+            pictureBox6 = new PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -49,6 +51,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -74,6 +77,8 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(64, 64, 64);
+            panel2.Controls.Add(pictureBox6);
+            panel2.Controls.Add(button1);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(pictureBox5);
@@ -113,7 +118,7 @@
             // 
             pictureBox5.BackColor = Color.White;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(18, 502);
+            pictureBox5.Location = new Point(11, 545);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(42, 48);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
@@ -125,7 +130,7 @@
             btnFechar.FlatStyle = FlatStyle.Popup;
             btnFechar.Font = new Font("Times New Roman", 15.75F);
             btnFechar.ForeColor = Color.White;
-            btnFechar.Location = new Point(3, 493);
+            btnFechar.Location = new Point(3, 537);
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(197, 66);
             btnFechar.TabIndex = 10;
@@ -136,7 +141,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(18, 372);
+            pictureBox4.Location = new Point(11, 433);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(42, 48);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
@@ -158,7 +163,7 @@
             btnEncoMenu.FlatStyle = FlatStyle.Popup;
             btnEncoMenu.Font = new Font("Times New Roman", 15.75F);
             btnEncoMenu.ForeColor = Color.White;
-            btnEncoMenu.Location = new Point(3, 363);
+            btnEncoMenu.Location = new Point(0, 426);
             btnEncoMenu.Name = "btnEncoMenu";
             btnEncoMenu.Size = new Size(197, 66);
             btnEncoMenu.TabIndex = 4;
@@ -198,6 +203,29 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Times New Roman", 15.75F);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(3, 322);
+            button1.Name = "button1";
+            button1.Size = new Size(197, 66);
+            button1.TabIndex = 15;
+            button1.Text = "     Cadastro";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(13, 330);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(42, 40);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 16;
+            pictureBox6.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -221,6 +249,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
         }
 
@@ -239,5 +268,7 @@
         private PictureBox pictureBox3;
         private Panel panel3;
         private Label label2;
+        private PictureBox pictureBox6;
+        private Button button1;
     }
 }
