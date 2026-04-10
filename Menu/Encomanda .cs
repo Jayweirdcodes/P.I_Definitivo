@@ -46,7 +46,7 @@ namespace Menu
 
         private void BtnMenuEnco_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
+           Form2 form = new Form2();
             form.Show();
             this.Close();
         }
@@ -86,6 +86,8 @@ namespace Menu
                 conn.Open();
 
                 string sql = "insert into combos (c1) values (combo 1 )";
+               
+
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataAdapter ba = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -99,7 +101,20 @@ namespace Menu
 
         private void btnConfirmarPed_Click(object sender, EventArgs e)
         {
+            MySqlConnection conn = new MySqlConnection(conexao);
+            try
+            {
+                conn.Open();
+                string sql = "";
 
+
+            }
+            catch (Exception ex) { }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

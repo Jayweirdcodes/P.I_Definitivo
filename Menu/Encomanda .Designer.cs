@@ -32,7 +32,10 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
-            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            pictureBox5 = new PictureBox();
+            button5 = new Button();
+            button4 = new Button();
             pictureBox1 = new PictureBox();
             btnEstoqueEnco = new Button();
             pictureBox2 = new PictureBox();
@@ -42,8 +45,8 @@
             label6 = new Label();
             panel5 = new Panel();
             label3 = new Label();
-            textBox3 = new TextBox();
-            textBox1 = new TextBox();
+            txtQuantidade = new TextBox();
+            txtPedidos = new TextBox();
             label9 = new Label();
             btnConfirmarPed = new Button();
             dgvEncomendas = new DataGridView();
@@ -58,18 +61,21 @@
             button8 = new Button();
             button7 = new Button();
             panel6 = new Panel();
-            textBox2 = new TextBox();
+            txtObs = new TextBox();
             label2 = new Label();
             btnConfirmarObs = new Button();
+            pictureBox3 = new PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvEncomendas).BeginInit();
             panel4.SuspendLayout();
             panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -97,6 +103,10 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(64, 64, 64);
+            panel2.Controls.Add(pictureBox4);
+            panel2.Controls.Add(pictureBox5);
+            panel2.Controls.Add(button5);
+            panel2.Controls.Add(button4);
             panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(btnEstoqueEnco);
@@ -109,15 +119,53 @@
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
-            // pictureBox3
+            // pictureBox4
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(12, 422);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(40, 38);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 9;
-            pictureBox3.TabStop = false;
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(8, 323);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(42, 48);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 13;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.BackColor = Color.White;
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(12, 517);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(42, 48);
+            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox5.TabIndex = 12;
+            pictureBox5.TabStop = false;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.FromArgb(64, 64, 64);
+            button5.FlatStyle = FlatStyle.Popup;
+            button5.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button5.ForeColor = Color.White;
+            button5.Location = new Point(3, 510);
+            button5.Name = "button5";
+            button5.Size = new Size(197, 66);
+            button5.TabIndex = 11;
+            button5.Text = "Fechar";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.FromArgb(64, 64, 64);
+            button4.FlatStyle = FlatStyle.Popup;
+            button4.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(3, 314);
+            button4.Name = "button4";
+            button4.Size = new Size(205, 66);
+            button4.TabIndex = 10;
+            button4.Text = "Encomendas";
+            button4.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -164,7 +212,7 @@
             BtnMenuEnco.Name = "BtnMenuEnco";
             BtnMenuEnco.Size = new Size(197, 66);
             BtnMenuEnco.TabIndex = 5;
-            BtnMenuEnco.Text = "Menu";
+            BtnMenuEnco.Text = "Cadastro ";
             BtnMenuEnco.UseVisualStyleBackColor = false;
             BtnMenuEnco.Click += BtnMenuEnco_Click;
             // 
@@ -199,8 +247,8 @@
             // 
             panel5.BackColor = Color.WhiteSmoke;
             panel5.Controls.Add(label3);
-            panel5.Controls.Add(textBox3);
-            panel5.Controls.Add(textBox1);
+            panel5.Controls.Add(txtQuantidade);
+            panel5.Controls.Add(txtPedidos);
             panel5.Controls.Add(label9);
             panel5.Controls.Add(btnConfirmarPed);
             panel5.Location = new Point(563, 282);
@@ -220,20 +268,20 @@
             label3.TabIndex = 22;
             label3.Text = "Quantidade";
             // 
-            // textBox3
+            // txtQuantidade
             // 
-            textBox3.Location = new Point(25, 114);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(221, 23);
-            textBox3.TabIndex = 21;
+            txtQuantidade.Location = new Point(25, 114);
+            txtQuantidade.Name = "txtQuantidade";
+            txtQuantidade.Size = new Size(221, 23);
+            txtQuantidade.TabIndex = 21;
             // 
-            // textBox1
+            // txtPedidos
             // 
-            textBox1.Location = new Point(25, 53);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(221, 23);
-            textBox1.TabIndex = 20;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txtPedidos.Location = new Point(25, 53);
+            txtPedidos.Name = "txtPedidos";
+            txtPedidos.Size = new Size(221, 23);
+            txtPedidos.TabIndex = 20;
+            txtPedidos.TextChanged += textBox1_TextChanged;
             // 
             // label9
             // 
@@ -380,7 +428,7 @@
             // panel6
             // 
             panel6.BackColor = Color.WhiteSmoke;
-            panel6.Controls.Add(textBox2);
+            panel6.Controls.Add(txtObs);
             panel6.Controls.Add(label2);
             panel6.Controls.Add(btnConfirmarObs);
             panel6.Location = new Point(563, 506);
@@ -388,12 +436,12 @@
             panel6.Size = new Size(273, 158);
             panel6.TabIndex = 21;
             // 
-            // textBox2
+            // txtObs
             // 
-            textBox2.Location = new Point(25, 53);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(221, 23);
-            textBox2.TabIndex = 20;
+            txtObs.Location = new Point(25, 53);
+            txtObs.Name = "txtObs";
+            txtObs.Size = new Size(221, 23);
+            txtObs.TabIndex = 20;
             // 
             // label2
             // 
@@ -419,6 +467,16 @@
             btnConfirmarObs.Text = "Confirmar ";
             btnConfirmarObs.UseVisualStyleBackColor = false;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(12, 422);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(40, 38);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 9;
+            pictureBox3.TabStop = false;
+            // 
             // Encomanda
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -440,7 +498,8 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel5.ResumeLayout(false);
@@ -450,6 +509,7 @@
             panel4.PerformLayout();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -463,11 +523,10 @@
         private Button BtnMenuEnco;
         private Button btnEstoqueEnco;
         private Label label4;
-        private PictureBox pictureBox3;
         private PictureBox pictureBox1;
         private Label label6;
         private Panel panel5;
-        private TextBox textBox1;
+        private TextBox txtPedidos;
         private Label label9;
         private Button btnConfirmarPed;
         private DataGridView dgvEncomendas;
@@ -478,9 +537,9 @@
         private Button button8;
         private Button button2;
         private Button button1;
-        private TextBox textBox3;
+        private TextBox txtQuantidade;
         private Panel panel6;
-        private TextBox textBox2;
+        private TextBox txtObs;
         private Label label2;
         private Button btnConfirmarObs;
         private Label label3;
@@ -488,5 +547,10 @@
         private DataGridViewTextBoxColumn Quantidade;
         private DataGridViewTextBoxColumn Obs;
         private Panel panel3;
+        private Button button5;
+        private Button button4;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox3;
     }
 }
