@@ -34,7 +34,11 @@
             panel2 = new Panel();
             pictureBox6 = new PictureBox();
             pictureBox4 = new PictureBox();
+<<<<<<< HEAD
             btnCadastroEstoque = new Button();
+=======
+            button2 = new Button();
+>>>>>>> 46061ae06a4fb177f1f443bb147b751254d3a252
             button1 = new Button();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
@@ -124,6 +128,7 @@
             pictureBox4.TabIndex = 16;
             pictureBox4.TabStop = false;
             // 
+<<<<<<< HEAD
             // btnCadastroEstoque
             // 
             btnCadastroEstoque.FlatStyle = FlatStyle.Popup;
@@ -136,9 +141,23 @@
             btnCadastroEstoque.Text = "     Cadastro";
             btnCadastroEstoque.UseVisualStyleBackColor = true;
             btnCadastroEstoque.Click += btnCadastroEstoque_Click;
+=======
+            // button2
+            // 
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Font = new Font("Times New Roman", 15.75F);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(3, 322);
+            button2.Name = "button2";
+            button2.Size = new Size(197, 66);
+            button2.TabIndex = 17;
+            button2.Text = "     Cadastro";
+            button2.UseVisualStyleBackColor = true;
+>>>>>>> 46061ae06a4fb177f1f443bb147b751254d3a252
             // 
             // button1
             // 
+            button1.BackColor = Color.FromArgb(80, 80, 80);
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
@@ -147,7 +166,7 @@
             button1.Size = new Size(197, 66);
             button1.TabIndex = 16;
             button1.Text = "      Estoque";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             // 
             // pictureBox3
             // 

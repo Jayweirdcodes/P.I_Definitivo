@@ -16,5 +16,34 @@ namespace Menu
         {
             InitializeComponent();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEstoqueEnco_Click(object sender, EventArgs e)
+        {
+            Estoque enco = new Estoque();
+            enco.Show();
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Encomanda enco = new Encomanda();
+            enco.Show();
+            this.Close();
+        }
+
+        private void BtnMenuEnco_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

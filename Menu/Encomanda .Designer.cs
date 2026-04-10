@@ -36,6 +36,7 @@
             pictureBox5 = new PictureBox();
             button5 = new Button();
             button4 = new Button();
+            pictureBox3 = new PictureBox();
             pictureBox1 = new PictureBox();
             btnEstoqueEnco = new Button();
             pictureBox2 = new PictureBox();
@@ -44,38 +45,25 @@
             label4 = new Label();
             label6 = new Label();
             panel5 = new Panel();
+            numericUpDown1 = new NumericUpDown();
             label3 = new Label();
-            txtQuantidade = new TextBox();
-            txtPedidos = new TextBox();
             label9 = new Label();
             btnConfirmarPed = new Button();
-            dgvEncomendas = new DataGridView();
-            Pedido = new DataGridViewTextBoxColumn();
-            Quantidade = new DataGridViewTextBoxColumn();
-            Obs = new DataGridViewTextBoxColumn();
-            label5 = new Label();
-            panel4 = new Panel();
-            button2 = new Button();
-            button1 = new Button();
-            button3 = new Button();
-            button8 = new Button();
-            button7 = new Button();
             panel6 = new Panel();
             txtObs = new TextBox();
             label2 = new Label();
             btnConfirmarObs = new Button();
-            pictureBox3 = new PictureBox();
+            comboBox1 = new ComboBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvEncomendas).BeginInit();
-            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -156,7 +144,7 @@
             // 
             // button4
             // 
-            button4.BackColor = Color.FromArgb(64, 64, 64);
+            button4.BackColor = Color.FromArgb(80, 80, 80);
             button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button4.ForeColor = Color.White;
@@ -166,6 +154,16 @@
             button4.TabIndex = 10;
             button4.Text = "Encomendas";
             button4.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(12, 422);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(40, 38);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 9;
+            pictureBox3.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -246,15 +244,21 @@
             // panel5
             // 
             panel5.BackColor = Color.WhiteSmoke;
+            panel5.Controls.Add(numericUpDown1);
             panel5.Controls.Add(label3);
-            panel5.Controls.Add(txtQuantidade);
-            panel5.Controls.Add(txtPedidos);
             panel5.Controls.Add(label9);
             panel5.Controls.Add(btnConfirmarPed);
             panel5.Location = new Point(563, 282);
             panel5.Name = "panel5";
             panel5.Size = new Size(273, 201);
             panel5.TabIndex = 20;
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(78, 118);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(120, 23);
+            numericUpDown1.TabIndex = 23;
             // 
             // label3
             // 
@@ -267,21 +271,6 @@
             label3.Size = new Size(156, 31);
             label3.TabIndex = 22;
             label3.Text = "Quantidade";
-            // 
-            // txtQuantidade
-            // 
-            txtQuantidade.Location = new Point(25, 114);
-            txtQuantidade.Name = "txtQuantidade";
-            txtQuantidade.Size = new Size(221, 23);
-            txtQuantidade.TabIndex = 21;
-            // 
-            // txtPedidos
-            // 
-            txtPedidos.Location = new Point(25, 53);
-            txtPedidos.Name = "txtPedidos";
-            txtPedidos.Size = new Size(221, 23);
-            txtPedidos.TabIndex = 20;
-            txtPedidos.TextChanged += textBox1_TextChanged;
             // 
             // label9
             // 
@@ -308,122 +297,6 @@
             btnConfirmarPed.Text = "Confirmar ";
             btnConfirmarPed.UseVisualStyleBackColor = false;
             btnConfirmarPed.Click += btnConfirmarPed_Click;
-            // 
-            // dgvEncomendas
-            // 
-            dgvEncomendas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvEncomendas.Columns.AddRange(new DataGridViewColumn[] { Pedido, Quantidade, Obs });
-            dgvEncomendas.Location = new Point(892, 282);
-            dgvEncomendas.Name = "dgvEncomendas";
-            dgvEncomendas.Size = new Size(418, 409);
-            dgvEncomendas.TabIndex = 21;
-            // 
-            // Pedido
-            // 
-            Pedido.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Pedido.HeaderText = "Pedido";
-            Pedido.Name = "Pedido";
-            // 
-            // Quantidade
-            // 
-            Quantidade.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            Quantidade.HeaderText = "Quantidade";
-            Quantidade.Name = "Quantidade";
-            Quantidade.Width = 94;
-            // 
-            // Obs
-            // 
-            Obs.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Obs.HeaderText = "Obs";
-            Obs.Name = "Obs";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Georgia", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Black;
-            label5.Location = new Point(25, 4);
-            label5.Name = "label5";
-            label5.Size = new Size(153, 43);
-            label5.TabIndex = 21;
-            label5.Text = "Combos";
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.Snow;
-            panel4.Controls.Add(button2);
-            panel4.Controls.Add(button1);
-            panel4.Controls.Add(label5);
-            panel4.Controls.Add(button3);
-            panel4.Controls.Add(button8);
-            panel4.Controls.Add(button7);
-            panel4.Location = new Point(271, 251);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(200, 440);
-            panel4.TabIndex = 18;
-            panel4.Paint += panel4_Paint;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.LightGray;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(0, 346);
-            button2.Name = "button2";
-            button2.Size = new Size(200, 66);
-            button2.TabIndex = 23;
-            button2.Text = "Pizza de Banana + Pepsi 2L";
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.LightGray;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(0, 274);
-            button1.Name = "button1";
-            button1.Size = new Size(200, 66);
-            button1.TabIndex = 22;
-            button1.Text = "Pizza de Chocolate + Sprite 2L";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.LightGray;
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(0, 59);
-            button3.Name = "button3";
-            button3.Size = new Size(200, 66);
-            button3.TabIndex = 6;
-            button3.Text = "Pizza de calabresa + coca2L";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
-            // 
-            // button8
-            // 
-            button8.BackColor = Color.LightGray;
-            button8.FlatStyle = FlatStyle.Popup;
-            button8.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button8.Location = new Point(0, 130);
-            button8.Name = "button8";
-            button8.Size = new Size(200, 66);
-            button8.TabIndex = 15;
-            button8.Text = "Pizza de queijo + coca 2L ";
-            button8.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            button7.BackColor = Color.LightGray;
-            button7.FlatStyle = FlatStyle.Popup;
-            button7.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button7.Location = new Point(0, 202);
-            button7.Name = "button7";
-            button7.Size = new Size(200, 66);
-            button7.TabIndex = 14;
-            button7.Text = "Pizza de frango + coca 2L";
-            button7.UseVisualStyleBackColor = false;
             // 
             // panel6
             // 
@@ -467,15 +340,13 @@
             btnConfirmarObs.Text = "Confirmar ";
             btnConfirmarObs.UseVisualStyleBackColor = false;
             // 
-            // pictureBox3
+            // comboBox1
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(12, 422);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(40, 38);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 9;
-            pictureBox3.TabStop = false;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(892, 289);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(418, 23);
+            comboBox1.TabIndex = 22;
             // 
             // Encomanda
             // 
@@ -483,11 +354,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(1347, 776);
+            Controls.Add(comboBox1);
             Controls.Add(panel6);
             Controls.Add(label6);
-            Controls.Add(dgvEncomendas);
             Controls.Add(panel5);
-            Controls.Add(panel4);
             Controls.Add(label4);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -495,21 +365,20 @@
             Name = "Encomanda";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Encomanda";
+            Load += Encomanda_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvEncomendas).EndInit();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -526,31 +395,20 @@
         private PictureBox pictureBox1;
         private Label label6;
         private Panel panel5;
-        private TextBox txtPedidos;
         private Label label9;
         private Button btnConfirmarPed;
-        private DataGridView dgvEncomendas;
-        private Label label5;
-        private Panel panel4;
-        private Button button3;
-        private Button button7;
-        private Button button8;
-        private Button button2;
-        private Button button1;
-        private TextBox txtQuantidade;
         private Panel panel6;
         private TextBox txtObs;
         private Label label2;
         private Button btnConfirmarObs;
         private Label label3;
-        private DataGridViewTextBoxColumn Pedido;
-        private DataGridViewTextBoxColumn Quantidade;
-        private DataGridViewTextBoxColumn Obs;
         private Panel panel3;
         private Button button5;
         private Button button4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox4;
         private PictureBox pictureBox3;
+        private NumericUpDown numericUpDown1;
+        private ComboBox comboBox1;
     }
 }
