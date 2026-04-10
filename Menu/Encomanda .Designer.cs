@@ -54,6 +54,10 @@
             label2 = new Label();
             btnConfirmarObs = new Button();
             comboBox1 = new ComboBox();
+            panel4 = new Panel();
+            textBox1 = new TextBox();
+            label5 = new Label();
+            button1 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -64,6 +68,7 @@
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             panel6.SuspendLayout();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -154,6 +159,7 @@
             button4.TabIndex = 10;
             button4.Text = "Encomendas";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // pictureBox3
             // 
@@ -348,12 +354,56 @@
             comboBox1.Size = new Size(418, 23);
             comboBox1.TabIndex = 22;
             // 
+            // panel4
+            // 
+            panel4.BackColor = Color.WhiteSmoke;
+            panel4.Controls.Add(textBox1);
+            panel4.Controls.Add(label5);
+            panel4.Controls.Add(button1);
+            panel4.Location = new Point(243, 282);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(273, 158);
+            panel4.TabIndex = 23;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(25, 61);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(221, 23);
+            textBox1.TabIndex = 20;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Georgia", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.Black;
+            label5.Location = new Point(19, 9);
+            label5.Name = "label5";
+            label5.Size = new Size(239, 43);
+            label5.TabIndex = 19;
+            label5.Text = "Novo sabores";
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.LightGray;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(36, 101);
+            button1.Name = "button1";
+            button1.Size = new Size(200, 31);
+            button1.TabIndex = 14;
+            button1.Text = "Confirmar ";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
+            // 
             // Encomanda
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SeaShell;
             ClientSize = new Size(1347, 776);
+            Controls.Add(panel4);
             Controls.Add(comboBox1);
             Controls.Add(panel6);
             Controls.Add(label6);
@@ -379,6 +429,8 @@
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -410,5 +462,9 @@
         private PictureBox pictureBox3;
         private NumericUpDown numericUpDown1;
         private ComboBox comboBox1;
+        private Panel panel4;
+        private TextBox textBox1;
+        private Label label5;
+        private Button button1;
     }
 }
