@@ -46,7 +46,7 @@ namespace Menu
 
         private void BtnMenuEnco_Click(object sender, EventArgs e)
         {
-           Form2 form = new Form2();
+            Form2 form = new Form2();
             form.Show();
             this.Close();
         }
@@ -85,14 +85,6 @@ namespace Menu
 
                 conn.Open();
 
-                string sql = "insert into combos (c1) values (combo 1 )";
-               
-
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-                MySqlDataAdapter ba = new MySqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                ba.Fill(dt);
-                dgvEncomendas.DataSource = dt;
 
 
             }
@@ -115,6 +107,11 @@ namespace Menu
         private void button5_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Encomanda_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
