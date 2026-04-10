@@ -32,6 +32,8 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
+            pictureBox4 = new PictureBox();
+            button1 = new Button();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
@@ -52,12 +54,16 @@
             label5 = new Label();
             panel4 = new Panel();
             panel5 = new Panel();
+            pictureBox6 = new PictureBox();
+            button2 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvTabelaEstoque).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -83,6 +89,10 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(64, 64, 64);
+            panel2.Controls.Add(pictureBox6);
+            panel2.Controls.Add(pictureBox4);
+            panel2.Controls.Add(button2);
+            panel2.Controls.Add(button1);
             panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(pictureBox1);
@@ -93,6 +103,28 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(200, 783);
             panel2.TabIndex = 1;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(18, 230);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(42, 48);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 16;
+            pictureBox4.TabStop = false;
+            // 
+            // button1
+            // 
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(3, 221);
+            button1.Name = "button1";
+            button1.Size = new Size(197, 66);
+            button1.TabIndex = 16;
+            button1.Text = "      Estoque";
+            button1.UseVisualStyleBackColor = true;
             // 
             // pictureBox3
             // 
@@ -106,8 +138,9 @@
             // 
             // pictureBox2
             // 
+            pictureBox2.BackColor = Color.White;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(18, 417);
+            pictureBox2.Location = new Point(18, 546);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(42, 48);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -117,7 +150,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(18, 221);
+            pictureBox1.Location = new Point(18, 435);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(42, 48);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -129,7 +162,7 @@
             btnEncoEstoque.FlatStyle = FlatStyle.Popup;
             btnEncoEstoque.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnEncoEstoque.ForeColor = Color.White;
-            btnEncoEstoque.Location = new Point(3, 212);
+            btnEncoEstoque.Location = new Point(3, 426);
             btnEncoEstoque.Name = "btnEncoEstoque";
             btnEncoEstoque.Size = new Size(197, 66);
             btnEncoEstoque.TabIndex = 4;
@@ -142,11 +175,11 @@
             btnMenuEstoque.FlatStyle = FlatStyle.Popup;
             btnMenuEstoque.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnMenuEstoque.ForeColor = Color.White;
-            btnMenuEstoque.Location = new Point(3, 408);
+            btnMenuEstoque.Location = new Point(3, 537);
             btnMenuEstoque.Name = "btnMenuEstoque";
             btnMenuEstoque.Size = new Size(197, 66);
             btnMenuEstoque.TabIndex = 2;
-            btnMenuEstoque.Text = "Menu";
+            btnMenuEstoque.Text = "  Fechar";
             btnMenuEstoque.UseVisualStyleBackColor = true;
             btnMenuEstoque.Click += btnMenuEstoque_Click;
             // 
@@ -290,6 +323,28 @@
             panel5.Size = new Size(760, 78);
             panel5.TabIndex = 15;
             // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(13, 335);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(42, 40);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 18;
+            pictureBox6.TabStop = false;
+            // 
+            // button2
+            // 
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Font = new Font("Times New Roman", 15.75F);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(3, 322);
+            button2.Name = "button2";
+            button2.Size = new Size(197, 66);
+            button2.TabIndex = 17;
+            button2.Text = "     Cadastro";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // Estoque
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -319,10 +374,12 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvTabelaEstoque).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -352,5 +409,9 @@
         private Label label5;
         private Panel panel4;
         private Panel panel5;
+        private Button button1;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox6;
+        private Button button2;
     }
 }
