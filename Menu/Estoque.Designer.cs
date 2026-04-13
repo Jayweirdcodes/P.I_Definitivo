@@ -34,9 +34,7 @@
             panel2 = new Panel();
             pictureBox6 = new PictureBox();
             pictureBox4 = new PictureBox();
-
             btnCadastroEstoque = new Button();
-
             button1 = new Button();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
@@ -138,9 +136,6 @@
             btnCadastroEstoque.Text = "     Cadastro";
             btnCadastroEstoque.UseVisualStyleBackColor = true;
             btnCadastroEstoque.Click += btnCadastroEstoque_Click;
-            // button2
-            // 
-
             // 
             // button1
             // 
@@ -312,7 +307,7 @@
             btnAttEstoque.Name = "btnAttEstoque";
             btnAttEstoque.Size = new Size(92, 30);
             btnAttEstoque.TabIndex = 11;
-            btnAttEstoque.Text = "ATUALIZAR";
+            btnAttEstoque.Text = "EDITAR";
             btnAttEstoque.UseVisualStyleBackColor = true;
             btnAttEstoque.Click += btnAttEstoque_Click;
             // 
