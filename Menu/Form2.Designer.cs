@@ -52,9 +52,6 @@
             txtEndereço = new TextBox();
             btnSalvar = new Button();
             dgvClientes = new DataGridView();
-            Pedido = new DataGridViewTextBoxColumn();
-            Quantidade = new DataGridViewTextBoxColumn();
-            Obs = new DataGridViewTextBoxColumn();
             label6 = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -223,21 +220,23 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(250, 160);
+            label2.Location = new Point(253, 160);
             label2.Name = "label2";
             label2.Size = new Size(83, 29);
             label2.TabIndex = 4;
             label2.Text = "Nome ";
+            label2.Click += label2_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(250, 208);
+            label3.Location = new Point(276, 208);
             label3.Name = "label3";
             label3.Size = new Size(57, 29);
             label3.TabIndex = 5;
             label3.Text = "CPF";
+            label3.Click += label3_Click;
             // 
             // label4
             // 
@@ -253,7 +252,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(218, 310);
+            label5.Location = new Point(221, 310);
             label5.Name = "label5";
             label5.Size = new Size(115, 29);
             label5.TabIndex = 7;
@@ -263,14 +262,14 @@
             // 
             txtTelefone.Location = new Point(339, 269);
             txtTelefone.Name = "txtTelefone";
-            txtTelefone.Size = new Size(235, 23);
+            txtTelefone.Size = new Size(342, 23);
             txtTelefone.TabIndex = 8;
             // 
             // txtCPF
             // 
             txtCPF.Location = new Point(339, 214);
             txtCPF.Name = "txtCPF";
-            txtCPF.Size = new Size(235, 23);
+            txtCPF.Size = new Size(342, 23);
             txtCPF.TabIndex = 9;
             // 
             // txtNome
@@ -284,13 +283,13 @@
             // 
             txtEndereço.Location = new Point(339, 316);
             txtEndereço.Name = "txtEndereço";
-            txtEndereço.Size = new Size(461, 23);
+            txtEndereço.Size = new Size(342, 23);
             txtEndereço.TabIndex = 11;
             // 
             // btnSalvar
             // 
             btnSalvar.Font = new Font("Georgia", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSalvar.Location = new Point(339, 383);
+            btnSalvar.Location = new Point(447, 384);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(100, 44);
             btnSalvar.TabIndex = 13;
@@ -301,40 +300,21 @@
             // dgvClientes
             // 
             dgvClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvClientes.Columns.AddRange(new DataGridViewColumn[] { Pedido, Quantidade, Obs });
-            dgvClientes.Location = new Point(872, 235);
+            dgvClientes.Location = new Point(874, 190);
             dgvClientes.Name = "dgvClientes";
             dgvClientes.Size = new Size(418, 409);
             dgvClientes.TabIndex = 22;
-            // 
-            // Pedido
-            // 
-            Pedido.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Pedido.HeaderText = "Pedido";
-            Pedido.Name = "Pedido";
-            // 
-            // Quantidade
-            // 
-            Quantidade.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-            Quantidade.HeaderText = "Quantidade";
-            Quantidade.Name = "Quantidade";
-            Quantidade.Width = 94;
-            // 
-            // Obs
-            // 
-            Obs.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Obs.HeaderText = "Obs";
-            Obs.Name = "Obs";
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Georgia", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(1027, 160);
+            label6.Location = new Point(1026, 153);
             label6.Name = "label6";
             label6.Size = new Size(119, 34);
             label6.TabIndex = 23;
             label6.Text = "Clientes";
+            label6.Click += label6_Click;
             // 
             // Form2
             // 
@@ -398,9 +378,6 @@
         private TextBox txtEndereço;
         private Button btnSalvar;
         private DataGridView dgvClientes;
-        private DataGridViewTextBoxColumn Pedido;
-        private DataGridViewTextBoxColumn Quantidade;
-        private DataGridViewTextBoxColumn Obs;
         private Label label6;
     }
 }

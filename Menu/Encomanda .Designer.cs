@@ -55,9 +55,9 @@
             btnConfirmarObs = new Button();
             comboBox1 = new ComboBox();
             panel4 = new Panel();
-            textBox1 = new TextBox();
+            txtNovoSabor = new TextBox();
             label5 = new Label();
-            button1 = new Button();
+            btnNovoSabor = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -357,20 +357,20 @@
             // panel4
             // 
             panel4.BackColor = Color.WhiteSmoke;
-            panel4.Controls.Add(textBox1);
+            panel4.Controls.Add(txtNovoSabor);
             panel4.Controls.Add(label5);
-            panel4.Controls.Add(button1);
+            panel4.Controls.Add(btnNovoSabor);
             panel4.Location = new Point(243, 282);
             panel4.Name = "panel4";
             panel4.Size = new Size(273, 158);
             panel4.TabIndex = 23;
             // 
-            // textBox1
+            // txtNovoSabor
             // 
-            textBox1.Location = new Point(25, 61);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(221, 23);
-            textBox1.TabIndex = 20;
+            txtNovoSabor.Location = new Point(25, 61);
+            txtNovoSabor.Name = "txtNovoSabor";
+            txtNovoSabor.Size = new Size(221, 23);
+            txtNovoSabor.TabIndex = 20;
             // 
             // label5
             // 
@@ -384,18 +384,18 @@
             label5.TabIndex = 19;
             label5.Text = "Novo sabores";
             // 
-            // button1
+            // btnNovoSabor
             // 
-            button1.BackColor = Color.LightGray;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(36, 101);
-            button1.Name = "button1";
-            button1.Size = new Size(200, 31);
-            button1.TabIndex = 14;
-            button1.Text = "Confirmar ";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click_1;
+            btnNovoSabor.BackColor = Color.LightGray;
+            btnNovoSabor.FlatStyle = FlatStyle.Popup;
+            btnNovoSabor.Font = new Font("Times New Roman", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnNovoSabor.Location = new Point(36, 101);
+            btnNovoSabor.Name = "btnNovoSabor";
+            btnNovoSabor.Size = new Size(200, 31);
+            btnNovoSabor.TabIndex = 14;
+            btnNovoSabor.Text = "Confirmar ";
+            btnNovoSabor.UseVisualStyleBackColor = false;
+            btnNovoSabor.Click += button1_Click_1;
             // 
             // Encomanda
             // 
@@ -463,8 +463,8 @@
         private NumericUpDown numericUpDown1;
         private ComboBox comboBox1;
         private Panel panel4;
-        private TextBox textBox1;
+        private TextBox txtNovoSabor;
         private Label label5;
-        private Button button1;
+        private Button btnNovoSabor;
     }
 }

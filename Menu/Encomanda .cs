@@ -116,7 +116,19 @@ namespace Menu
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            
+            MySqlConnection conex = new MySqlConnection();
 
+
+            try
+            {
+               conex.Open();
+                string sql = "insert into pizzaz (sabores) values (@sabores)";
+                MySqlCommand cmd = new MySqlCommand(sql, conex);
+                cmd.Parameters.AddWithValue("@sabores", txtNovoSabor.Text);
+                cmd.ExecuteNonQuery();
+
+            } catch (Exception ex) { }
         }
 
         private void button4_Click(object sender, EventArgs e)
